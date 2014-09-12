@@ -18,21 +18,20 @@ This is the sequel to shader-school.  The goal is to teach the basic WebGL API b
   1.  Attribute pointers
   1.  drawArrays
   1.  Element buffers and drawElements
-1.  Misc. drawing stuff
+1.  Advanced drawing
   1.  Line width
   1.  Face culling
   1.  Back face/front face variables
   1.  Polygon offset
   1.  Reading pixels
-1.  Depth buffer
-1.  Blending
-1.  Stencil buffer
+  1.  Depth buffer
+  1.  Blending
+  1.  Stencil buffer
 1.  Textures
 1.  Framebuffers
-1.  Context loss
 1.  Extensions
   1. Vertex array objects
   1. Float textures
   1. Instanced arrays
   1. Multiple draw buffers
-  1. etc.
+  1.  Context loss
