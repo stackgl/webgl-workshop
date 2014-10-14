@@ -1,0 +1,21 @@
+{
+  "name": "webgl-workshop",
+  "version": "1.0.0",
+  "description": "Boilerplate for frontend-focused NodeSchool lessons",
+  "main": "server.js",
+  "scripts": {
+    "start": "linklocal -r && node node.js",
+    "update-subdeps": "npm install --save workshop/* exercises/*"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@exercise/bare": "file:exercises/bare",
+    "@exercise/beefy": "file:exercises/beefy",
+    "@workshop/exercise": "file:workshop/exercise",
+    "@workshop/menu": "file:workshop/menu",
+    "@workshop/server": "file:workshop/server"
+  },
+  "devDependencies": {
+    "linklocal": "^2.0.1"
+  }
+}

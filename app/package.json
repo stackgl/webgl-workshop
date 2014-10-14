@@ -1,0 +1,23 @@
+{
+  "name": "WebGL Workshop",
+  "version": "1.0.0",
+  "description": "Boilerplate for frontend-focused NodeSchool lessons",
+  "main": "bootstrap.html",
+  "license": "MIT",
+  "author": "stack.gl contributors (http://stack.gl/)",
+  "contributors": [
+    "Mikola Lysenko",
+    "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io)"
+  ],
+  "single-instance": true,
+  "window": {
+    "title": "WebGL Workshop",
+    "toolbar": false,
+    "resizable": true,
+    "frame": true,
+    "width": 500,
+    "min_width": 500,
+    "height": 300,
+    "show": false
+  }
+}
