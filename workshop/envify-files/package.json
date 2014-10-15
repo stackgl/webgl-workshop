@@ -1,0 +1,7 @@
+{
+  "name": "@workshop/envify-files",
+  "version": "1.0.0",
+  "dependencies": {
+    "envify": "^3.0.0"
+  }
+}

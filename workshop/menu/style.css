@@ -1,0 +1,220 @@
+/**
+ * TODO: improve CSS situation
+ */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:0 0}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+
+  overflow: hidden;
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  color: #FFF;
+  background: #34363B;
+  margin: 0;
+  padding: 0;
+}
+
+body .gl-compare-content {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+body .gl-compare-sidebar {
+  width: 420px;
+}
+
+.gl-compare-content p {
+  margin-bottom: 1em;
+}
+
+.gl-compare-content a {
+  color: #5ED7F7;
+  text-decoration: none;
+  border-bottom: 1px solid #5ED7F7;
+}
+
+.gl-compare-content pre,
+.gl-compare-content code {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 200;
+}
+
+.gl-compare-content h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted #AAA;
+}
+
+.gl-compare-content hr {
+  margin: 1.25em 0;
+  height: 0;
+  border-top: 1px dotted #AAA;
+}
+
+.gl-compare-content pre {
+  margin-bottom: 1em;
+  overflow-x: auto;
+  overflow-y: none;
+  background-color: rgba(0,0,0,0.5);
+  padding: 1em;
+}
+
+.gl-compare-content pre + h2,
+.gl-compare-content pre + h3 {
+  margin-top: 2em;
+}
+
+.gl-compare-content code {
+  color: #AAA;
+}
+
+.gl-compare-content pre > code {
+  color: #FFF;
+}
+.gl-compare-content ul,
+.gl-compare-content ol {
+  margin-bottom: 1em;
+}
+
+.gl-compare-content ul > li:before {
+  content: '\00a0* ';
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.gl-compare-content ul > li {
+  text-indent: -21px;
+  position: relative;
+  left: 21px;
+  margin-right: 21px;
+  margin-bottom: 0.25em;
+}
+
+.gl-compare-content ol > li {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+#container {
+  position: absolute;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+}
+
+.gl-compare-content .def { border-bottom: 1px dotted rgba(255,255,255,0.5); }
+.gl-compare-content .hljs-preprocessor {
+  color: #FF6E57;
+}
+.gl-compare-content .hljs-comment .def { border-bottom: none; }
+.gl-compare-content .hljs-preprocessor .def { border-bottom: none; }
+.gl-compare-content .hljs-number .def { border-bottom: none; }
+.gl-compare-content .hljs-comment {
+  color: #AAA;
+}
+.gl-compare-content .hljs-keyword .def { border-bottom-color: rgba(255, 226, 95, 0.5); }
+.gl-compare-content .hljs-keyword {
+  color: #FFE25F;
+}
+.gl-compare-content .hljs-number {
+  color: #58FF8B;
+}
+.gl-compare-content .hljs-literal {
+  color: #FF6E57;
+}
+
+.gl-compare-content .warn {
+  color: #FF6E57;
+}
+
+.notification {
+  opacity: 0;
+  font-weight: 400;
+  font-size: 12px;
+  color: #34363B;
+  padding: 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  width: 300px;
+  background: #FF6E57;
+
+  -moz-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s;
+  -ms-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s;
+  -o-transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s;
+  transition: opacity 0.5s, bottom 0.5s, top 0.5s, left 0.5s, right 0.5s;
+}
+
+.notification.opening {
+  opacity: 1;
+}
+
+.notification.closing {
+  opacity: 0;
+  right: -200px!important;
+}
+
+.buttons {
+  position: absolute;
+  top: 4px; right: 4px;
+  list-style-type: none;
+}
+
+.buttons .button-home,
+.buttons .button-open {
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: #A9B0C2;
+  margin-left: 4px;
+  cursor: pointer;
+  float: right;
+  width: 48px;
+  height: 48px;
+}
+
+.buttons .button-home {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iODQiIHZpZXdCb3g9IjAgMCAxMDAgODQiPjxwYXRoIGZpbGw9IiMzNDM2M0IiIGQ9Ik04MiAzMi42NDF2LTIzLjY0MWgtMTR2OS4zNTlsLTE4LTE4LjM1OS01MCA1MWgxMnYzM2gzMXYtMjdoMTR2MjdoMzF2LTMzaDEyeiIvPjwvc3ZnPg==');
+}
+.buttons .button-open {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0iIzM0MzYzQiIgZD0iTTk2LjI0OSAyNS4wNTdoLTU1LjA2OGwtOS44MDMtMTEuMzc1LS4wMi4wMDZjLS42ODEtLjY5Ni0xLjYyOC0xLjEzMS0yLjY3OC0xLjEzMWgtMjQuOTMxYy0yLjA3IDAtMy43NDkgMS42NzktMy43NDkgMy43NXY2Ny4zODdjMCAyLjA3MSAxLjY3OSAzLjc1IDMuNzQ5IDMuNzVoOTIuNWMyLjA3MSAwIDMuNzUtMS42NzkgMy43NTEtMy43NXYtNTQuODg4YzAtMi4wNzEtMS42OC0zLjc0OS0zLjc1MS0zLjc0OXoiLz48L3N2Zz4=');
+}
+
+.buttons .button-home.flashing,
+.buttons .button-open.flashing,
+.flashing .gl-compare-show {
+  animation: flashing 1s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+body .buttons .button-home.flashing,
+body .buttons .button-open.flashing {
+  animation-name: flashing, wobbling;
+}
+
+.gl-compare-hide.flashing {
+  animation: wobbling 1s infinite;
+}
+
+@keyframes flashing {
+  20%, 80% { background-color: #A9B0C2; }
+  50%      { background-color: #FFE169; }
+}
+
+@keyframes wobbling {
+  0%, 50%, 100% { transform: rotate(+0deg); }
+  60%           { transform: rotate(-3deg); }
+  80%           { transform: rotate(+3deg); }
+}
