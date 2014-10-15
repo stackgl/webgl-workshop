@@ -65,8 +65,7 @@ function common(opts) {
     compare.render()
   }
 
-  // TODO: override gl.bindFramebuffer to mask that
-  // an FBO is being bound here
+  // TODO: use multiple gl contexts
   function actual(fbo) {
     fbo.bind()
     sol.draw(gl)

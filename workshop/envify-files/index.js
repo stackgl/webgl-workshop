@@ -36,7 +36,7 @@ function envifyFiles(template, target) {
     envify.push('--file_'+base, goal)
 
     if (!fs.existsSync(goal))
-      fs.createReadStream(abs)
+      fs.createReadStream(orig)
         .pipe(fs.createWriteStream(goal))
   })
 
