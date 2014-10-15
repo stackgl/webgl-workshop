@@ -84,4 +84,6 @@ function common(opts) {
       overlay = null
     }, 250)
   })
+
+  return gl
 }
