@@ -1,0 +1,16 @@
+{
+  "name": "@workshop/menu",
+  "version": "1.0.0",
+  "brstar": ["./findup"],
+  "main": "index.js",
+  "browserify": {
+    "transform": ["brstar"]
+  },
+  "dependencies": {
+    "beefy": "^2.1.1",
+    "browser-menu": "^1.0.1",
+    "brstar": "^0.1.0",
+    "findup": "^0.1.5",
+    "sidenote": "^1.0.0"
+  }
+}

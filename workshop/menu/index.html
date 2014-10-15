@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      body {
+        background: #34363B;
+      }
+
+      .browser-terminal-menu {
+        -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s;
+                transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s;
+        -webkit-transform: translate(-500px, 0);
+            -ms-transform: translate(-500px, 0);
+                transform: translate(-500px, 0);
+        opacity: 0;
+      }
+
+      .ready .browser-terminal-menu {
+        -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+                transform: translate(0, 0);
+        opacity: 1;
+      }
+
+      .ready.exiting .browser-terminal-menu {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script charset="utf-8" src="menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "@workshop/common",
+  "version": "1.0.0",
+  "dependencies": {
+    "gl-compare": "^2.0.1",
+    "gl-compare-sidebar": "^1.1.4",
+    "gl-context": "^0.1.1",
+    "google-fonts": "0.0.0",
+    "marked": "^0.3.2"
+  }
+}
