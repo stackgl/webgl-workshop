@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@exercise/sample": "file:exercises/sample",
+    "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
