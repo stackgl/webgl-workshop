@@ -37,6 +37,6 @@ Partition the screen into 4 equally sized colored rectangles, with two on top an
 * top-left: Red
 * top-right: Green
 * bottom-left: Blue
-* bottom-right: Yello
+* bottom-right: Yellow
 
 You should do this using only the `gl.clear`, `gl.scissor` and `gl.enable` commands as we saw earlier.
