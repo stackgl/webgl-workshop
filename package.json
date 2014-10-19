@@ -15,7 +15,27 @@
     "@workshop/exercise": "file:workshop/exercise",
     "@workshop/exercise-ui": "file:workshop/exercise-ui",
     "@workshop/menu": "file:workshop/menu",
-    "@workshop/server": "file:workshop/server"
+    "@workshop/server": "file:workshop/server",
+    "beefy": "^2.1.1",
+    "brfs": "^1.2.0",
+    "browser-menu": "^1.0.1",
+    "browserify": "^6.1.0",
+    "brstar": "^0.1.0",
+    "canvas-fit": "^1.2.0",
+    "envify": "^3.0.0",
+    "events": "^1.0.2",
+    "findup": "^0.1.5",
+    "fs-readdir-recursive": "0.0.2",
+    "gl-compare": "^2.0.1",
+    "gl-compare-sidebar": "^1.1.4",
+    "gl-context": "^0.1.1",
+    "glslify": "^1.6.0",
+    "google-fonts": "0.0.0",
+    "inherits": "^2.0.1",
+    "marked": "^0.3.2",
+    "mkdirp": "^0.5.0",
+    "resolve": "^1.0.0",
+    "sidenote": "^1.0.0"
   },
   "devDependencies": {
     "linklocal": "^2.0.1"
