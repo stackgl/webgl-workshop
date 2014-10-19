@@ -160,7 +160,8 @@ html {
 
 .eui-content h1 > code,
 .eui-content h2 > code,
-.eui-content h3 > code {
+.eui-content h3 > code,
+.eui-content p > code {
   font-style: italic;
 }
 
