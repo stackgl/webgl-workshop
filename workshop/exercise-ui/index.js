@@ -42,4 +42,8 @@ function ExerciseUI() {
     if (!button) return
     self.emit(button.title)
   }, false)
+
+  this.on('home', function() {
+    window.location = '/'
+  })
 }
