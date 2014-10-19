@@ -1,6 +1,10 @@
 webgl-workshop
 ==============
 
+*Currently a work in progress – this'll be ready to use around Halloween for
+[CampJS](http://campjs.com) but until then please feel free to poke around and
+provide feedback if you're interested.*
+
 This is the sequel to shader-school.  The goal is to teach the basic WebGL API by breaking it down into manageable chunks.  Here is a sketch of how this could work:
 
 1.  WebGL context creation
