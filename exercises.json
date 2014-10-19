@@ -1,3 +1,5 @@
 {
-  "» SAMPLE SECTION: BOILERPLATE LESSON": "@exercise/sample"
+  "» SAMPLE SECTION: BOILERPLATE LESSON": "@exercise/sample",
+  "» INTRO: CLEARING THE DRAWING BUFFER": "@exercise/intro-clear-color",
+  "» INTRO: SCISSOR TEST": "@exercise/intro-scissor"
 }
