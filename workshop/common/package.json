@@ -2,6 +2,7 @@
   "name": "@workshop/common",
   "version": "1.0.0",
   "dependencies": {
+    "canvas-fit": "^1.2.0",
     "cheerio": "^0.17.0",
     "gl-compare": "^2.0.1",
     "gl-compare-sidebar": "^1.1.4",

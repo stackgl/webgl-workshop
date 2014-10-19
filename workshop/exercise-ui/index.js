@@ -27,6 +27,8 @@ function ExerciseUI() {
     domify(template(this))
   )
 
+  this.submission = this.el.querySelector('.submission-preview-wrap')
+  this.solution = this.el.querySelector('.solution-preview')
   this.content = this.el.querySelector('.eui-content')
   this.el.addEventListener('click', function(e) {
     var button = findup(e.target, function(el) {

@@ -1,6 +1,7 @@
 var highlight  = require('highlight.js').highlight
 var eui        = require('@workshop/exercise-ui')
 var fonts      = require('google-fonts')
+var fit        = require('canvas-fit')
 var getCompare = require('gl-compare')
 var getContext = require('gl-context')
 var quotemeta  = require('quotemeta')
@@ -54,19 +55,20 @@ function common(opts) {
   assert(opts.solution, '@workshop/common: .solution is missing')
   assert(opts.submission, '@workshop/common: .submission is missing')
 
-  var gl      = getContext(opts.canvas, render)
-  var compare = getCompare(gl, actual, expected)
-  var sol     = opts.solution
-  var sub     = opts.submission
+  var glSub = getContext(opts.canvas, renderSub)
+  var glSol = getContext(ui.solution, renderSol)
+  var sol   = opts.solution
+  var sub   = opts.submission
+
+  sol.gl = glSol
+  sub.gl = glSub
 
   ;[sub, sol].forEach(function(s) {
-    s.init && s.init(gl)
+    s.init && s.init(s.gl)
     s.draw = s.draw || noop
   })
 
-  compare.mode = 'slide'
-  compare.amount = 0.5
-
+  ui.submission.appendChild(opts.canvas)
   ui.content.innerHTML = marked(opts.readme || '', markedOpts)
   ui.on('test', function() {
     opts.test(function(err, passed) {
@@ -76,20 +78,17 @@ function common(opts) {
     })
   })
 
-  function render() {
-    compare.run()
-    compare.render()
+  window.addEventListener('load'
+    , fit(opts.canvas, ui.submission)
+    , false
+  )
+
+  function renderSol() {
+    sol.draw(glSol)
   }
 
-  // TODO: use multiple gl contexts
-  function actual(fbo) {
-    fbo.bind()
-    sol.draw(gl)
-  }
-
-  function expected(fbo) {
-    fbo.bind()
-    sub.draw(gl)
+  function renderSub() {
+    sub.draw(glSub)
   }
 
   setTimeout(function() {
@@ -100,7 +99,10 @@ function common(opts) {
     }, 250)
   })
 
-  return gl
+  return {
+    submission: sub
+    , solution: sol
+  }
 }
 
 function annotateGLSL(code) {

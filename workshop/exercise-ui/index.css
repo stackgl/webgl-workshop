@@ -14,7 +14,7 @@ body, html {
   background-color: #000;
 }
 
-.eui, .eui pre {
+.eui, .eui pre, .eui code {
   font-family: Inconsolata;
 }
 
@@ -122,10 +122,19 @@ body, html {
 
 .eui-content h1,
 .eui-content h2 {
-  border-bottom: 1px dotted rgba(255,255,255,0.5);
   margin-bottom: 3px;
   margin-top: 1rem;
   padding-bottom: 3px;
+}
+
+.eui-content h1 {
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+
+.eui-content h1 > code,
+.eui-content h2 > code,
+.eui-content h3 > code {
+  font-style: italic;
 }
 
 .eui-content p,
@@ -168,7 +177,7 @@ body, html {
 
 .eui-content pre {
   background-color: rgba(0, 0, 0, 0.25);
-  line-height: 1em;
+  line-height: 1.3em;
   margin: 1rem 0;
   margin-left: -1rem;
   padding: 1rem;

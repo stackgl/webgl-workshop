@@ -12,13 +12,13 @@ function clearScreen(gl) {
 
 Here we used the following new commands:
 
-### `gl.clearColor(red, green, blue, alpha)`
+## `gl.clearColor(red, green, blue, alpha)`
 Sets the clear color to an rgba triple.  The input arguments are floating point numbers between 0 and 1.
 
-### `gl.clear(gl.COLOR_BUFFER_BIT)`
+## `gl.clear(gl.COLOR_BUFFER_BIT)`
 This clears the color channel of the drawing buffer.  It is possible to pass other values to this function, though we won't worry about this until later.
 
-## Exercise
+# Exercise
 For this exercise, write a method which takes a WebGL context as input and clears the background color to opaque magenta (fully satured red and blue, no green).  To help get started, here is a shell:
 
 ```javascript
