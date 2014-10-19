@@ -44,26 +44,11 @@ This is the sequel to shader-school.  The goal is to teach the basic WebGL API b
   1. Multiple draw buffers
   1. Context loss
 
-## Notes on workshop module
+## Other Resources
 
-A boilerplate for creating your own frontend-focused
-[NodeSchool](http://nodeschool.io/) lessons, not unlike
-[shader-school](http://github.com/stackgl/shader-school).
+* [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
 
-Can be run as a vanilla node server, or bundled up as a node-webkit app. The
-latter case is great for getting something installed without hitting the
-terminal, among a bunch of other benefits. Currently only OSX is supported
-this way, but I imagine it wouldn't be too hard to get the same working for
-Windows/Linux – if you have some time to spare, pull requests would be very
-much appreciated!
-
-This forms the base of an upcoming WebGL workshop being created for
-[CampJS](http://campjs.com/).
-
-Parts of this may be refactored into independent packages in the future, but
-right now I'm in a haste to get this together!
-
-## Setup
+## Development
 
 Requires [npm](http://npmjs.org/) `2.x.x`.
 
@@ -86,7 +71,7 @@ npm start
 make clean build
 ```
 
-## Writing a New Exercise
+### Writing a New Exercise
 
 In this project, each exercise is treated as an *independent* package, i.e. a
 directory with its own `package.json` file, dependencies and so on. You're also
