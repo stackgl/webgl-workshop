@@ -21,3 +21,16 @@ void main() {
   gl_FragColor = vec4(color, 1.0);
 }
 ```
+
+**Bold text** here.
+
+*Italics* here too.
+
+``` javascript
+var gl = canvas.getContext('webgl')
+
+function draw() {
+  gl.enable(gl.DEPTH_TEST)
+  gl.enable(gl.CULL_FACE)
+}
+```

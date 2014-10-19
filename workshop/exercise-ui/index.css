@@ -169,7 +169,14 @@ body, html {
 .eui-content pre {
   background-color: rgba(0, 0, 0, 0.25);
   line-height: 1em;
+  margin: 1rem 0;
   margin-left: -1rem;
   padding: 1rem;
   width: 100%;
+  font-size: 0.8rem;
+}
+
+.eui-content strong {
+  color: #fff;
+  font-weight: 800;
 }
