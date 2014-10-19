@@ -13,6 +13,7 @@
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
+    "@workshop/exercise-ui": "file:workshop/exercise-ui",
     "@workshop/menu": "file:workshop/menu",
     "@workshop/server": "file:workshop/server"
   },
