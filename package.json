@@ -9,9 +9,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exercise/sample": "file:exercises/sample",
     "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
+    "@exercise/sample": "file:exercises/sample",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
@@ -28,6 +28,7 @@
     "events": "^1.0.2",
     "findup": "^0.1.5",
     "fs-readdir-recursive": "0.0.2",
+    "gl-api": "^1.0.1",
     "gl-compare": "^2.0.1",
     "gl-compare-sidebar": "^1.1.4",
     "gl-context": "^0.1.1",
