@@ -9,9 +9,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exercise/sample": "file:exercises/sample",
     "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
+    "@exercise/sample": "file:exercises/shader-create",
+    "@exercise/shader-create": "file:exercises/shader-create",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
