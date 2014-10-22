@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <style media="screen">
       body {
         background: #34363B;
@@ -25,9 +26,86 @@
       .ready.exiting .browser-terminal-menu {
         opacity: 0;
       }
+
+      .analytics, .browser-terminal-menu {
+        font-family: Inconsolata, monospace!important;
+      }
+
+      .analytics {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        width: 350px;
+        background: #A9B0C2;
+        color: #34363B;
+        padding: 1rem;
+        font-size: 14px;
+        opacity: 0;
+
+        -webkit-transform: translate(0, -120%);
+            -ms-transform: translate(0, -120%);
+                transform: translate(0, -120%);
+        -webkit-transition: -webkit-transform 0.5s 0.25s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s;
+                transition: transform 0.5s 0.25s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s;
+
+        line-height: 21px;
+      }
+
+      .analytics h1 {
+        font-size: 1em;
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
+      }
+
+      .analytics p {
+        margin-top: 1em;
+      }
+
+      .analytics-toggle {
+        color: #A9B0C2;
+        text-align: center;
+        text-decoration: none;
+        background: #34363B;
+        display: block;
+        line-height: 2em;
+      }
+
+      .ready .analytics {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+                transform: translate(0, 0);
+      }
+
+      .ready.exiting .analytics {
+        opacity: 0;
+      }
     </style>
   </head>
   <body>
+    <aside class="analytics">
+      <h1>ANONYMOUS ANALYTICS</h1>
+      <p>
+        By default, we record a limited amount of data about how you
+        progress throughout this workshop. This is completely anonymous
+        and solely for the purpose of improving the quality of the workshop
+        overall &mdash; your submissions and identity will remain private.
+      </p>
+      <p>
+        None the less, if you'd rather disable this feature then you
+        can easily toggle it:
+      </p>
+      <a class="analytics-toggle" href="#">Disable Analytics</a>
+    </aside>
     <script charset="utf-8" src="menu.js"></script>
+
+    <!--
+      WebGL Stats! Data is completely anonymous, and simply
+      reports the WebGL features available to you on your
+      machine/browser. This data is then aggregated and
+      made publicly accessible at http://webglstats.com
+    -->
+    <script src="//cdn.webglstats.com" defer="defer" async="async"></script>
   </body>
 </html>

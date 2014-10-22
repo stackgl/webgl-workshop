@@ -91,6 +91,10 @@ function common(opts) {
     })
   })
 
+  require('./analytics')({
+    ui: ui
+  })
+
   window.addEventListener('load'
     , fit(opts.canvas, ui.submission)
     , false
