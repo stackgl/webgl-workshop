@@ -13,6 +13,7 @@
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
     "@exercise/sample": "file:exercises/sample",
     "@exercise/shader-create": "file:exercises/shader-create",
+    "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
