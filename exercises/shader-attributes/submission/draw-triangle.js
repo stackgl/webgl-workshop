@@ -15,7 +15,7 @@ module.exports = function drawTriangle(gl) {
       -1, 0, 1, 1, 0,
       0, -1, 0, 1, 1,
       1, 1,  1, 0, 1]), 
-    gl.DYNAMIC_DRAW)
+    gl.STREAM_DRAW)
   gl.enableVertexAttribArray(0)
   gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 20, 0)
   gl.enableVertexAttribArray(1)
