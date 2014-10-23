@@ -5,6 +5,7 @@
     "canvas-fit": "^1.2.0",
     "cheerio": "^0.17.0",
     "escape-html": "^1.0.1",
+    "gl-api": "^1.0.2",
     "gl-compare": "^2.0.1",
     "gl-compare-sidebar": "^1.1.4",
     "gl-context": "^0.1.1",
