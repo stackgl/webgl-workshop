@@ -3,5 +3,6 @@
   "» INTRO: CLEARING THE DRAWING BUFFER": "@exercise/intro-clear-color",
   "» INTRO: SCISSOR TEST": "@exercise/intro-scissor",
   "» SHADERS: CREATING A SHADER": "@exercise/shader-create",
-  "» SHADERS: SETTING UNIFORMS": "@exercise/shader-uniforms"
+  "» SHADERS: SETTING UNIFORMS": "@exercise/shader-uniforms",
+  "» SHADERS: ATTRIBUTE LOCATIONS": "@exercise/shader-attributes"
 }
