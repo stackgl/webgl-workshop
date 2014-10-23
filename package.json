@@ -9,13 +9,20 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@exercise/sample": "file:exercises/sample",
     "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
+<<<<<<< HEAD
     "@exercise/buffer-create": "file:exercises/buffer-create",
+=======
+    "@exercise/sample": "file:exercises/sample",
+    "@exercise/shader-create": "file:exercises/shader-create",
+    "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
+    "@exercise/shader-attributes": "file:exercises/shader-attributes",
+>>>>>>> master
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
+    "@workshop/exercise-ui": "file:workshop/exercise-ui",
     "@workshop/menu": "file:workshop/menu",
     "@workshop/server": "file:workshop/server",
     "beefy": "^2.1.1",
@@ -28,6 +35,7 @@
     "events": "^1.0.2",
     "findup": "^0.1.5",
     "fs-readdir-recursive": "0.0.2",
+    "gl-api": "^1.0.1",
     "gl-compare": "^2.0.1",
     "gl-compare-sidebar": "^1.1.4",
     "gl-context": "^0.1.1",

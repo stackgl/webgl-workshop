@@ -2,10 +2,18 @@
   "name": "@workshop/common",
   "version": "1.0.0",
   "dependencies": {
+    "canvas-fit": "^1.2.0",
+    "cheerio": "^0.17.0",
+    "escape-html": "^1.0.1",
+    "gl-api": "^1.0.2",
     "gl-compare": "^2.0.1",
     "gl-compare-sidebar": "^1.1.4",
     "gl-context": "^0.1.1",
+    "glsldoc": "0.0.4",
     "google-fonts": "0.0.0",
-    "marked": "^0.3.2"
+    "highlight.js": "^8.3.0",
+    "highlights": "^0.14.0",
+    "marked": "^0.3.2",
+    "quotemeta": "0.0.0"
   }
 }

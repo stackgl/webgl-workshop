@@ -72,3 +72,25 @@ menu.on('select', function(_, i) {
 setTimeout(function() {
   document.body.classList.add('ready')
 })
+
+var analytics = document.querySelector('.analytics-toggle')
+
+console.log(updateAnalytics())
+
+function updateAnalytics() {
+  var value = localStorage.getItem('webgl-workshop-analytics-disable')
+
+  analytics.innerHTML = value
+    ? 'Enable Analytics'
+    : 'Disable Analytics'
+
+}
+
+analytics.addEventListener('click', function(e) {
+  localStorage.setItem('webgl-workshop-analytics-disable'
+    , !localStorage.getItem('webgl-workshop-analytics-disable') ? 'true' : '')
+  updateAnalytics()
+  e.preventDefault()
+  e.stopPropagation()
+  return false
+}, false)
