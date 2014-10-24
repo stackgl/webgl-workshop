@@ -5,5 +5,6 @@
   "» SHADERS: CREATING A SHADER": "@exercise/shader-create",
   "» SHADERS: SETTING UNIFORMS": "@exercise/shader-uniforms",
   "» SHADERS: ATTRIBUTE LOCATIONS": "@exercise/shader-attributes",
-  "» BUFFERS: CREATION": "@exercise/buffer-create"
+  "» BUFFERS: CREATION": "@exercise/buffer-create",
+  "» BUFFERS: ATTRIBUTE POINTERS": "@exercise/buffer-attributes"
 }

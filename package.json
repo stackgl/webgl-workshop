@@ -11,14 +11,12 @@
   "dependencies": {
     "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
-<<<<<<< HEAD
-    "@exercise/buffer-create": "file:exercises/buffer-create",
-=======
     "@exercise/sample": "file:exercises/sample",
     "@exercise/shader-create": "file:exercises/shader-create",
     "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
     "@exercise/shader-attributes": "file:exercises/shader-attributes",
->>>>>>> master
+    "@exercise/buffer-create": "file:exercises/buffer-create",
+    "@exercise/buffer-attributes": "file:exercises/buffer-attributes",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
