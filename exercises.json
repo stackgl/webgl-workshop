@@ -7,5 +7,6 @@
   "» SHADERS: ATTRIBUTE LOCATIONS": "@exercise/shader-attributes",
   "» BUFFERS: CREATION": "@exercise/buffer-create",
   "» BUFFERS: ATTRIBUTE POINTERS": "@exercise/buffer-attributes",
-  "» BUFFERS: INTERLEAVED ATTRIBUTES": "@exercise/buffer-interleaved"
+  "» BUFFERS: INTERLEAVED ATTRIBUTES": "@exercise/buffer-interleaved",
+  "» BUFFERS: BASIC DRAWING": "@exercise/buffer-draw"
 }
