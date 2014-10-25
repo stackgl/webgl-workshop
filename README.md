@@ -34,6 +34,8 @@ This is the sequel to shader-school.  The goal is to teach the basic WebGL API b
   1. Viewport and clip coordinates
   1. Face culling
   1. Back and front face variables
+1. Second challenge:
+  1. Draw a 3D textured mesh
 1.  Framebuffer objects
   1. Render buffers
   1. Frame buffer basics
