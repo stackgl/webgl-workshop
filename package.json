@@ -15,6 +15,7 @@
     "@exercise/shader-create": "file:exercises/shader-create",
     "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
     "@exercise/shader-attributes": "file:exercises/shader-attributes",
+    "@exercise/challenge-0": "file:exercises/challenge-0",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",

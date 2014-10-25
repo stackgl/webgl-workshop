@@ -4,5 +4,6 @@
   "» INTRO: SCISSOR TEST": "@exercise/intro-scissor",
   "» SHADERS: CREATING A SHADER": "@exercise/shader-create",
   "» SHADERS: SETTING UNIFORMS": "@exercise/shader-uniforms",
-  "» SHADERS: ATTRIBUTE LOCATIONS": "@exercise/shader-attributes"
+  "» SHADERS: ATTRIBUTE LOCATIONS": "@exercise/shader-attributes",
+  "» FIRST CHALLENGE: DRAW A TRIANGLE": "@exercise/challenge-0"
 }
