@@ -17,6 +17,7 @@
     "@exercise/shader-attributes": "file:exercises/shader-attributes",
     "@exercise/buffer-create": "file:exercises/buffer-create",
     "@exercise/buffer-attributes": "file:exercises/buffer-attributes",
+    "@exercise/buffer-interleaved": "file:exercises/buffer-interleaved",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
