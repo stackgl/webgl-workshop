@@ -21,6 +21,7 @@
     "@exercise/buffer-interleaved": "file:exercises/buffer-interleaved",
     "@exercise/buffer-draw": "file:exercises/buffer-draw",
     "@exercise/buffer-elements": "file:exercises/buffer-elements",
+    "@exercise/teture-create": "file:exercises/texture-create",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",

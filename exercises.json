@@ -10,5 +10,6 @@
   "» BUFFERS: INTERLEAVED ATTRIBUTES": "@exercise/buffer-interleaved",
   "» BUFFERS: DRAWING": "@exercise/buffer-draw",
   "» BUFFERS: ELEMENTS": "@exercise/buffer-elements",
-  "» FIRST CHALLENGE: DRAW A TRIANGLE": "@exercise/challenge-0"
+  "» FIRST CHALLENGE: DRAW A TRIANGLE": "@exercise/challenge-0",
+  "» TEXTURES: CREATING A TEXTURE": "@exercise/texture-create"
 }
