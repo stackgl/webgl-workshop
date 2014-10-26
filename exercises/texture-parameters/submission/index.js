@@ -1,5 +1,5 @@
 var setup  = require('./setup')
-var PIXELS = require('./data.json')
+var PIXELS = require('./pixels')
 var WIDTH  = 512
 var HEIGHT = 512
 
