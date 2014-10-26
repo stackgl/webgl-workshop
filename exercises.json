@@ -11,5 +11,6 @@
   "» BUFFERS: DRAWING": "@exercise/buffer-draw",
   "» BUFFERS: ELEMENTS": "@exercise/buffer-elements",
   "» FIRST CHALLENGE: DRAW A TRIANGLE": "@exercise/challenge-0",
-  "» TEXTURES: CREATING A TEXTURE": "@exercise/texture-create"
+  "» TEXTURES: CREATING A TEXTURE": "@exercise/texture-create",
+  "» TEXTURES: FILTERING AND WRAPPING": "@exercise/texture-parameters"
 }
