@@ -175,6 +175,10 @@ html {
   list-style-type: none;
 }
 
+.eui-content ol {
+  margin-left: 2rem;
+}
+
 .eui-content ul li:before {
   content: '* ';
   white-space: pre;
