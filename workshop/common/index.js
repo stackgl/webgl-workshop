@@ -57,7 +57,7 @@ function common(opts) {
   overlay.style.background = '#34363B'
   overlay.style.zIndex = 99999
   overlay.style.opacity = 1
-  overlay.style.transition = 'opacity 0.25s'
+  overlay.style.transition = 'opacity 0.5s'
 
   document.body.appendChild(overlay)
   document.body.style.margin = 0
@@ -113,8 +113,8 @@ function common(opts) {
     setTimeout(function() {
       document.body.removeChild(overlay)
       overlay = null
-    }, 250)
-  })
+    }, 500)
+  }, 250)
 
   return {
     submission: sub
