@@ -1,9 +1,3 @@
-/**
- * Compares two init/draw pairs on an offscreen 200*200
- * canvas. The canvas is instrumented with gl-reset in
- * order to prevent state from leaking out and minimise
- * the risk of memory leaks.
- */
 var canvas = document.createElement('canvas')
 var gl     = require('gl-context')(canvas)
 var pixels = require('canvas-pixels')
@@ -21,19 +15,24 @@ var total = 200 * 200
 
 module.exports = compare
 
-function compare(solution, submission, threshold) {
-  threshold = threshold || 0
+function compare(solution, submission, opts) {
+  opts = opts || {}
+
+  var threshold = opts.threshold || 0
+  var args = [gl].concat(opts.args || [])
+  var init = opts.init || passthrough
+  var draw = opts.draw || passthrough
 
   clear(gl)
   reset()
-  solution.init && solution.init(gl)
-  solution.draw && solution.draw(gl)
+  solution.init && init(gl, solution.init)
+  solution.draw && draw(gl, solution.draw)
   var solutionPixels = pixels(gl)
 
   clear(gl)
   reset()
-  submission.init && submission.init(gl)
-  submission.draw && submission.draw(gl)
+  submission.init && init(gl, submission.init)
+  submission.draw && draw(gl, submission.draw)
   var submissionPixels = pixels(gl)
 
   var invalid = 0
@@ -52,4 +51,8 @@ function compare(solution, submission, threshold) {
 
 function abs(n) {
   return n > 0 ? n : -n
+}
+
+function passthrough(gl, fn) {
+  return fn.call(gl, gl)
 }
