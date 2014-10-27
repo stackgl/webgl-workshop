@@ -1,6 +1,15 @@
 # Scissor tests and capabilities
 
-Sometimes it is useful to split the drawing buffer into smaller pieces, for example when rendering split screen effects or updating a portion of an image.  To do simplify doing this, WebGL supports a feature called the *scissor test* which clips out all of the screen but a rectangle.  To turn on the *scissor test*, you first call the following method on the WebGL context:
+Sometimes it is useful to split the drawing buffer into smaller pieces, for
+example when updating a portion of an image.
+
+The scissor test is similar to `gl.viewport`, with the key difference being that
+it doesn't change the position of the edges of an image. So, while changing the
+viewport is similar to resizing an image, a scissor test is similar to cropping
+an image.
+
+To turn on the *scissor test*, you first call the following method on the WebGL
+context:
 
 ```javascript
 gl.enable(gl.SCISSOR_TEST)
