@@ -26,6 +26,7 @@
     "@exercise/texture-parameters": "file:exercises/texture-parameters",
     "@exercise/texture-units": "file:exercises/texture-units",
     "@exercise/texture-units": "file:exercises/texture-units",
+    "@exercise/3d-depth-buffer": "file:exercises/3d-depth-buffer",
     "@workshop/common": "file:workshop/common",
     "@workshop/compare": "file:workshop/compare",
     "@workshop/envify-files": "file:workshop/envify-files",
