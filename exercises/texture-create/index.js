@@ -1,4 +1,6 @@
 var Exercise   = require('@workshop/exercise')
+var compare    = require('@workshop/compare')
+var fresh      = require('fresh-require')
 var fit        = require('canvas-fit')
 var fs         = require('fs')
 
@@ -25,6 +27,10 @@ var gl = require('@workshop/common')({
   , submission: submission
   , title: 'Texture Creation'
   , test: function(done) {
-    return done(null, true)
+    // >=99% of pixels should be no more than 5 units in difference.
+    return done(null, compare(
+        fresh('./solution')
+      , fresh(process.env.file_index_js)
+    , 5) >= 0.99)
   }
 })
