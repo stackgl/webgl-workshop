@@ -76,12 +76,14 @@ function common(opts) {
   var glSol = getContext(ui.solution, renderSol)
   var sol   = opts.solution
   var sub   = opts.submission
+  var draw  = opts.draw || passthrough
+  var init  = opts.init || passthrough
 
   sol.gl = glSol
   sub.gl = glSub
 
   ;[sub, sol].forEach(function(s) {
-    s.init && s.init(s.gl)
+    s.init && init(s.gl, s.init)
     s.draw = s.draw || noop
   })
 
@@ -105,11 +107,11 @@ function common(opts) {
   )
 
   function renderSol() {
-    sol.draw(glSol)
+    draw(glSol, sol.draw)
   }
 
   function renderSub() {
-    sub.draw(glSub)
+    draw(glSub, sub.draw)
   }
 
   setTimeout(function() {
@@ -162,4 +164,8 @@ function annotateJS(code) {
   })
 
   return code.html()
+}
+
+function passthrough(gl, fn) {
+  return fn.call(gl, gl)
 }
