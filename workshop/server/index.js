@@ -1,4 +1,5 @@
 var readdirp  = require('fs-readdir-recursive')
+var copyMods  = require('./copy-modules')
 var Menu      = require('@workshop/menu')
 var findup    = require('findup')
 var resolve   = require('resolve')
@@ -8,25 +9,30 @@ var path      = require('path')
 var url       = require('url')
 var fs        = require('fs')
 
-var exercises = require(path.join(
-    findup.sync(__dirname, 'exercises.json')
-  , 'exercises.json'
-))
+var root = findup.sync(__dirname, 'exercises.json')
+var exercises = require(path.join(root, 'exercises.json'))
+var node_modules = path.join(root, 'node_modules')
 
 module.exports = createServer
 
 function createServer(config, done) {
+  config.answers = config.answers || path.join(process.cwd(), 'answers')
+
   var PORT = 14921
   var menu = Menu()
   var handlers = getHandlers(
       exercises
-    , config.answers || path.join(process.cwd(), 'answers')
+    , config.answers
   )
 
   return http.createServer()
     .on('request', request)
     .listen(14921, function(err) {
-      return done(err, 'http://localhost:'+PORT)
+      if (err) return done(err)
+
+      copyMods(node_modules, config.answers, function(err) {
+        return done(err, 'http://localhost:'+PORT)
+      })
     })
 
   function request(req, res) {
