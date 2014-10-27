@@ -1,6 +1,7 @@
 var readdirp  = require('fs-readdir-recursive')
 var copyMods  = require('./copy-modules')
 var Menu      = require('@workshop/menu')
+var opener    = require('opener')
 var findup    = require('findup')
 var resolve   = require('resolve')
 var mkdirp    = require('mkdirp')
@@ -57,6 +58,14 @@ function createServer(config, done) {
         req.url = '/' + req.url
       }
 
+      if (req.url === '/_open/solution') {
+        return openSolution(req, res, uri.slice(1))
+      }
+
+      if (req.url === '/_open/submission') {
+        return openSubmission(req, res, uri.slice(1), config.answers)
+      }
+
       return handlers[uri](req, res)
     }
 
@@ -80,4 +89,17 @@ function getHandlers(exercises, answers) {
 
     return packages
   }, {})
+}
+
+function openSolution(req, res, exercise) {
+  var root = path.dirname(require.resolve(exercise + '/package.json'))
+  var open = path.join(root, 'solution')
+  opener(open)
+  res.end()
+}
+
+function openSubmission(req, res, exercise, answers) {
+  var open = path.join(answers, exercise.replace(/^\@.*?\//, ''))
+  opener(open)
+  res.end()
 }

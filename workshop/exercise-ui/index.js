@@ -5,6 +5,7 @@ var minstache = require('minstache')
 var inherits  = require('inherits')
 var Emitter   = require('events/')
 var domify    = require('domify')
+var xhr       = require('xhr')
 var fs        = require('fs')
 
 var template  = minstache.compile(
@@ -46,5 +47,19 @@ function ExerciseUI() {
 
   this.on('home', function() {
     window.location = '/'
+  })
+
+  this.on('edit', function() {
+    get('_open/submission')
+  })
+
+  this.on('view solution', function() {
+    get('_open/solution')
+  })
+}
+
+function get(uri) {
+  xhr(uri, function(err, res, body) {
+    if (err) throw err
   })
 }

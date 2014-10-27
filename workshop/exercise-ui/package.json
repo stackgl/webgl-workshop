@@ -19,7 +19,8 @@
     "google-fonts": "0.0.0",
     "inherits": "^2.0.1",
     "minstache": "^1.2.0",
-    "rework": "^1.0.1"
+    "rework": "^1.0.1",
+    "xhr": "^1.17.0"
   },
   "devDependencies": {
     "beefy": "^2.1.1",
