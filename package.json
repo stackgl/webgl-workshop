@@ -24,6 +24,7 @@
     "@exercise/teture-create": "file:exercises/texture-create",
     "@exercise/teture-parameters": "file:exercises/texture-parameters",
     "@exercise/teture-mipmaps": "file:exercises/texture-mipmaps",
+    "@exercise/teture-units": "file:exercises/texture-units",
     "@workshop/common": "file:workshop/common",
     "@workshop/envify-files": "file:workshop/envify-files",
     "@workshop/exercise": "file:workshop/exercise",
