@@ -23,6 +23,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
+  , title: 'Attribute Pointers'
   , test: function(done) {
     return done(null, true)
   }

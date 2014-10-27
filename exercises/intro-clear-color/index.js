@@ -22,6 +22,7 @@ var gl = require('@workshop/common')({
   , readme: readme
   , exercise: exercise
   , solution: solution
+  , title: 'Clearing the Drawing Buffer'
   , submission: submission
   , test: function(done) {
     return done(null, true)

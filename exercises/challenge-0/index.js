@@ -23,6 +23,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
+  , title: 'Challenge #1: Draw a Triangle'
   , test: function(done) {
     return done(null, true)
   }

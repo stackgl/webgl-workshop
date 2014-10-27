@@ -68,6 +68,10 @@ function common(opts) {
   assert(opts.solution, '@workshop/common: .solution is missing')
   assert(opts.submission, '@workshop/common: .submission is missing')
 
+  if (opts.title) {
+    ui.header.innerHTML = escape(opts.title)
+  }
+
   var glSub = getContext(opts.canvas, renderSub)
   var glSol = getContext(ui.solution, renderSol)
   var sol   = opts.solution
