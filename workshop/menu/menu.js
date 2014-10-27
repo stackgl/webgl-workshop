@@ -24,7 +24,7 @@ var unComplete = '          '
 
 var rows = sidenote(keys.map(function(name, i) {
   var dir      = exercises[name]
-  var parts    = name.match(/^(.*?)([A-Z][^\:]+\:)(.*?)$/)
+  var parts    = name.match(/^(.*?)([0-9A-Z][^\:]+\:)(.*?)$/)
   var category = cats[i] = parts[2].slice(0, -1)
 
   var newname = parts
