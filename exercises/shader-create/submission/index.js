@@ -29,6 +29,7 @@ exports.init = function(gl) {
 
 // Run every frame: use this to draw things to the screen.
 exports.draw = function(gl) {
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   //Clear drawing buffer
   gl.clearColor(0,0,0,1)
   gl.clear(gl.COLOR_BUFFER_BIT)

@@ -17,6 +17,7 @@ exports.init = function(gl) {
 }
 
 exports.draw = function(gl) {
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(1,1,1,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
