@@ -237,6 +237,12 @@ html {
   font-weight: 800;
 }
 
+.eui-content a {
+  text-decoration: none;
+  color: #FFE169;
+  border-bottom: 1px solid #FFE169;
+}
+
 .eui-tooltip {
   position: absolute;
   z-index: 999;
