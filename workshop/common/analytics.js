@@ -1,7 +1,11 @@
+function nothing() {
+  return nothing
+}
+
 (function() {
   if (localStorage.getItem('webgl-workshop-analytics-disable')) {
     console.log('Google Analytics: disabled')
-    return module.exports = function(){}
+    return module.exports = nothing
   } else {
     console.log('Google Analytics: enabled')
   }
