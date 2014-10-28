@@ -70,6 +70,7 @@
     "marked": "^0.3.2",
     "minstache": "^1.2.0",
     "mkdirp": "^0.5.0",
+    "mousetrap": "0.0.1",
     "myth": "^1.2.1",
     "opener": "^1.4.0",
     "quotemeta": "0.0.0",

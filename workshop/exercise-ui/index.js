@@ -2,6 +2,7 @@ var findup    = require('findup-element')
 var fonts     = require('google-fonts')
 var escape    = require('escape-html')
 var css       = require('defaultcss')
+var mousetrap = require('mousetrap')
 var minstache = require('minstache')
 var inherits  = require('inherits')
 var Emitter   = require('events/')
@@ -31,6 +32,24 @@ function ExerciseUI() {
   this.el = document.body.appendChild(
     domify(template(this))
   )
+
+  mousetrap.bind([
+      'command+enter'
+    , 'alt+enter'
+    , 'ctrl+enter'
+  ], function() {
+    self.emit('test')
+  })
+
+  mousetrap.bind([
+      'command+o'
+    , 'ctrl+o'
+  ], function(e) {
+    self.emit('edit')
+    e.preventDefault()
+    e.stopPropagation()
+    return false
+  })
 
   this.submission = this.el.querySelector('.submission-preview-wrap')
   this.solution = this.el.querySelector('.solution-preview')
