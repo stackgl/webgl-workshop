@@ -240,3 +240,37 @@ html {
   color: #fff;
   font-weight: 800;
 }
+
+.eui-tooltip {
+  position: absolute;
+  z-index: 999;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: #4A4F5E;
+  border-radius: 3px;
+  padding: 3px;
+  text-align: center;
+  width: 80px;
+  -webkit-transform: translate(-50%, 2px);
+  -ms-transform: translate(-50%, 2px);
+  transform: translate(-50%, 2px);
+  box-shadow: 0 2px 0 0 #34363B;
+  border-left: 1px solid #34363B;
+  border-right: 1px solid #34363B;
+  border-bottom: 1px solid #34363B;
+  line-height: 1.5em;
+}
+
+.eui-tooltip:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #4A4F5E;
+  position: absolute;
+  top: 0;
+  left: 37px;
+  transform: translate(0, -100%);
+}
