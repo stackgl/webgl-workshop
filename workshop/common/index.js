@@ -87,6 +87,11 @@ function common(opts) {
     s.draw = s.draw || noop
   })
 
+  var analytics = require('./analytics')({
+      ui: ui
+    , exercise: opts.exercise
+  })
+
   ui.submission.appendChild(opts.canvas)
   ui.content.innerHTML = marked(opts.readme || '', markedOpts)
   ui.on('test', function() {
@@ -94,11 +99,13 @@ function common(opts) {
       opts.exercise.attempt(passed)
       if (err) throw err
       console.log('attempted:', passed)
-    })
-  })
 
-  require('./analytics')({
-    ui: ui
+      analytics()('send', {
+          hitType: 'event'
+        , eventCategory: 'Exercise Attempts'
+        , eventAction: passed ? 'Passed' : 'Failed'
+      })
+    })
   })
 
   window.addEventListener('load'

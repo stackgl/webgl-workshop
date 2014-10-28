@@ -38,16 +38,21 @@
     ui.on('stop', clicked('Play/Pause'))
     ui.on('edit', clicked('Edit Submission'))
     ui.on('view solution', clicked('View Solution'))
-  }
 
-  function clicked(name) {
     return function() {
-      ga('send', {
-          hitType: 'event'
-        , eventCategory: 'UI buttons'
-        , eventAction: 'Click'
-        , eventLabel: name
-      })
+      return ga
+    }
+
+    function clicked(name) {
+      return function() {
+        ga('send', {
+            hitType: 'event'
+          , eventCategory: 'UI buttons'
+          , eventAction: 'Clicked Button'
+          , eventLabel: name
+        })
+      }
     }
   }
+
 })()
