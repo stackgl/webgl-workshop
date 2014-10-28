@@ -6,8 +6,9 @@ var program
 exports.init = function(gl) {
   program = setupShader(gl)
 
-  gl.bindAttribLocation(program, 'position', 0)
-  gl.bindAttribLocation(program, 'color', 1)
+  gl.bindAttribLocation(program, 0, 'position')
+  gl.bindAttribLocation(program, 1, 'color')
+  gl.linkProgram(program)
 }
 
 exports.draw = function(gl) {
