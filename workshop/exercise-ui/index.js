@@ -56,6 +56,7 @@ function ExerciseUI() {
   this.reporter = this.el.querySelector('.eui-reporter')
   this.content = this.el.querySelector('.eui-content')
   this.header = this.el.querySelector('.eui-title')
+  this.input = this.el.querySelector('.eui-path')
   this.el.addEventListener('click', function(e) {
     var button = getButton(e.target)
     if (!button) return

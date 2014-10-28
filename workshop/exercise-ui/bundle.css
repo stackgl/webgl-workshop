@@ -328,3 +328,25 @@ html {
   background: #FF6F5C;
   border-bottom-color: #C24332;
 }
+
+.eui-path {
+  position: absolute;
+  top: 0;
+  left: 483px;
+  width: calc(100% - 583px);
+  -webkit-appearance: none;
+  height: 46px;
+  border: 0;
+  margin: 0;
+  padding: 14px;
+  box-sizing: border-box;
+  background: 0;
+  font-family: Inconsolata, mono;
+  text-align: center;
+  color: #DEE7FF;
+}
+
+.eui-path:focus {
+  color: #fff;
+  outline: 0;
+}

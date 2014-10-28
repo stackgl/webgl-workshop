@@ -11,6 +11,7 @@ var glapi      = require('gl-api')
 var marked     = require('marked')
 var glsldoc    = require('glsldoc')
 var assert     = require('assert')
+var path       = require('path')
 var noop       = (function(){})
 
 module.exports = common
@@ -50,6 +51,15 @@ var markedOpts = {
 function common(opts) {
   var overlay = document.createElement('div')
   var ui = eui()
+
+  var submissionFile = path.resolve(
+      process.env.project_root
+    , opts.dirname.slice(1)
+    , 'submission'
+    , 'index.js'
+  )
+
+  console.log('Submission File:', submissionFile)
 
   overlay.style.position = 'absolute'
   overlay.style.top = overlay.style.bottom =
@@ -94,6 +104,7 @@ function common(opts) {
     , exercise: opts.exercise
   })
 
+  ui.input.value = submissionFile
   ui.submission.appendChild(opts.canvas)
   ui.content.innerHTML = marked(opts.readme || '', markedOpts)
   ui.on('test', function() {

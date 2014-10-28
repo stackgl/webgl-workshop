@@ -25,6 +25,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
+  , dirname: __dirname
   , title: 'Back and Front Faces'
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.

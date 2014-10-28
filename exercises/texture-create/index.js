@@ -26,6 +26,7 @@ var gl = require('@workshop/common')({
   , solution: solution
   , submission: submission
   , title: 'Texture Creation'
+  , dirname: __dirname
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.
     return done(null, compare(

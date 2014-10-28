@@ -1,7 +1,10 @@
-var path = require('path')
-var fs   = require('fs')
+var findup = require('findup')
+var path   = require('path')
+var fs     = require('fs')
 
 module.exports = envifyFiles
+
+var root = findup.sync(__dirname, 'exercises.json')
 
 /**
  * Takes a "template" and "target" directory pair,
@@ -24,7 +27,7 @@ module.exports = envifyFiles
  *                            submits their answers.
  */
 function envifyFiles(template, target) {
-  var envify = ['-t', '[', require.resolve('envify')]
+  var envify = ['-g', '[', require.resolve('envify')]
 
   fs.readdirSync(template).forEach(function(name) {
     var orig = path.resolve(template, name)
@@ -40,6 +43,7 @@ function envifyFiles(template, target) {
         .pipe(fs.createWriteStream(goal))
   })
 
+  envify.push('--project_root', root)
   envify.push(']')
 
   return envify
