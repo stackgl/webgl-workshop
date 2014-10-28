@@ -53,8 +53,9 @@ function ExerciseUI() {
 
   this.submission = this.el.querySelector('.submission-preview-wrap')
   this.solution = this.el.querySelector('.solution-preview')
+  this.reporter = this.el.querySelector('.eui-reporter')
   this.content = this.el.querySelector('.eui-content')
-  this.header = this.el.querySelector('.eui-header')
+  this.header = this.el.querySelector('.eui-title')
   this.el.addEventListener('click', function(e) {
     var button = getButton(e.target)
     if (!button) return
@@ -94,6 +95,33 @@ function ExerciseUI() {
   this.on('view solution', function() {
     get('_open/solution')
   })
+}
+
+var n = 0
+ExerciseUI.prototype.matchMessage = function(msg, passed) {
+  var m = ++n
+  var classes = this.el.classList
+  this.reporter.innerHTML = escape(msg)
+  if (!classes.contains('eui-matched')) {
+    classes.add('eui-matched')
+  }
+
+  classes.remove(passed
+    ? 'eui-matched-failed'
+    : 'eui-matched-passed'
+  )
+  classes.add(passed
+    ? 'eui-matched-passed'
+    : 'eui-matched-failed'
+  )
+
+  var self = this
+  setTimeout(function() {
+    if (m !== n) return
+    classes.remove('eui-matched')
+    classes.remove('eui-matched-failed')
+    classes.remove('eui-matched-passed')
+  }, 2500)
 }
 
 function get(uri) {

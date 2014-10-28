@@ -51,7 +51,7 @@ html {
   left: 0;
   bottom: 0;
   top: 50px;
-  width: 400px;
+  width: 401px;
   background-color: #4A4F5E;
   padding: 1rem;
   font-size: 0.8rem;
@@ -74,7 +74,7 @@ html {
 
 .eui .submission-preview-wrap {
   position: absolute;
-  left: 432px;
+  left: 433px;
   right: 0;
   top: 50px;
   bottom: 0;
@@ -273,4 +273,62 @@ html {
   top: 0;
   left: 37px;
   transform: translate(0, -100%);
+}
+
+.eui-reporter {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translate(0, -48px);
+  visibility: hidden;
+  color: #383B47;
+  transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+.eui-title {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translate(0, 0);
+  visibility: visible;
+  transition: transform 0.5s, visibility 0s;
+}
+
+.eui-matched .eui-reporter {
+  transform: translate(0, 0);
+  transition: transform 0.5s, visibility 0s;
+  visibility: visible;
+}
+
+.eui-matched .eui-title {
+  transform: translate(0, -48px);
+  transition: transform 0.5s, visibility 0s 0.5s;
+  visibility: hidden;
+}
+
+.eui-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 1rem;
+  width: 366px;
+  height: 47px;
+  background: #4A4F5E;
+  border-bottom: 2px solid #34363B;
+  opacity: 0;
+  transition: opacity 0.5s, background-color 0.5s 0.1s, border-color 0.5s 0.1s;
+}
+
+.eui-matched .eui-status {
+  opacity: 1;
+}
+
+.eui-matched-passed .eui-status {
+  background: #61FF90;
+  border-bottom-color: #34D64F;
+}
+
+.eui-matched-failed .eui-status {
+  background: #FF6F5C;
+  border-bottom-color: #C24332;
 }

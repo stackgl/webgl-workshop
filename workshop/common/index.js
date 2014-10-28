@@ -97,14 +97,18 @@ function common(opts) {
   ui.on('test', function() {
     opts.test(function(err, passed) {
       opts.exercise.attempt(passed)
-      if (err) throw err
-      console.log('attempted:', passed)
+      ui.matchMessage(passed
+        ? 'Passed, nice work!'
+        : 'Nope! Try Again?', passed
+      )
 
       analytics()('send', {
           hitType: 'event'
         , eventCategory: 'Exercise Attempts'
         , eventAction: passed ? 'Passed' : 'Failed'
       })
+
+      if (err) throw err
     })
   })
 
