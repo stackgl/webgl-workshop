@@ -1,12 +1,10 @@
-# Indexed drawing
-
-## Exercise
+# Exercise
 
 For this exercise you will draw a mesh using indexed arrays.  A shader with the necessary vertex attributes is provided for you.  It is up to you to set up the element array buffer and draw the object with the correct.
 
 The contents of the element array buffer are provided for you in a native array called `ELEMENT_DATA` and the number of elements to draw is stored in the variable `ELEMENT_COUNT`.
 
-## Element array buffers
+# Element Array Buffers
 
 Drawing too many vertices in WebGL can become expensive.  This is because each vertex consumes some fixed amount of memory and must be processed by a vertex shader.  To optimize rendering, it is therefore useful to reduce the number of vertices which are sent to the GPU.
 
@@ -32,8 +30,8 @@ Then we can initialize an element array buffer with these indices as follows:
 ```javascript
 var elementBuffer = gl.createBuffer(gl.ELEMENT_ARRAY_BUFFER)
 gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, elementBuffer)
-gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, 
-  new Uint16Array(indices), 
+gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
+  new Uint16Array(indices),
   gl.STATIC_DRAW)
 ```
 
@@ -53,7 +51,7 @@ gl.drawElements(gl.TRIANGLES, 9, gl.UNSIGNED_SHORT, 0)
 
 The arguments to this command are as follows:
 
-#### `gl.drawElements(type, count, gl.UNSIGNED_SHORT, offset)`
+## `gl.drawElements(type, count, gl.UNSIGNED_SHORT, offset)`
 The behavior here is almost exactly the same as `gl.drawArrays` except:
 
 * The order of `count` and `offset` is switched in the arguments

@@ -1,4 +1,15 @@
-# Scissor tests and capabilities
+# Exercise
+
+Partition the screen into 4 equally sized colored rectangles, with two on top and two on the bottom.  These rectangles should have the following colors:
+
+* top-left: Red
+* top-right: Green
+* bottom-left: Blue
+* bottom-right: Yellow
+
+You should do this using only the `gl.clear`, `gl.scissor` and `gl.enable` commands as we saw earlier.
+
+# Scissor Tests and Capabilities
 
 Sometimes it is useful to split the drawing buffer into smaller pieces, for
 example when updating a portion of an image.
@@ -38,14 +49,3 @@ gl.disable(gl.SCISSOR_TEST)
 > Turns off `capability`, undoing the effect of `gl.enable()`
 
 To get the size of the drawing buffer in pixels, you can use the `gl.drawingBufferWidth` and `gl.drawingBufferHeight` properties of the WebGL context.
-
-# Exercise
-
-Partition the screen into 4 equally sized colored rectangles, with two on top and two on the bottom.  These rectangles should have the following colors:
-
-* top-left: Red
-* top-right: Green
-* bottom-left: Blue
-* bottom-right: Yellow
-
-You should do this using only the `gl.clear`, `gl.scissor` and `gl.enable` commands as we saw earlier.

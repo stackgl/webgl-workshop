@@ -1,6 +1,4 @@
-# Basic drawing
-
-## Exercise
+# Exercise
 
 For this exercise, a buffer and shader has been prepared for you and all attribute values have been set.  You should use the draw arrays command to draw the following primitives in this order:
 
@@ -10,7 +8,7 @@ For this exercise, a buffer and shader has been prepared for you and all attribu
 1. 32 points starting from vertex 3
 1. A single triangle starting from vertex 0
 
-## Drawing stuff
+# Basic Drawing
 
 Once we have a buffer and shader set up, along with all the associated attribute pointers, we can finally start drawing stuff.  This is done using the `gl.drawArrays` command.  Here is an example of what a call to drawArrays looks like:
 
@@ -20,7 +18,7 @@ gl.drawArrays(gl.TRIANGLES, 0, 12)
 
 The interface for this function is as follows:
 
-#### `gl.drawArrays(type, offset, count)`
+## `gl.drawArrays(type, offset, count)`
 * `type` is the type of primitive to draw
 * `offset` is the starting vertex to draw from
 * `count` is the number of **vertices** to draw

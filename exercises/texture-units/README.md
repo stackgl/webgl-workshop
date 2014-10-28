@@ -1,12 +1,10 @@
-# Multitexturing
-
-## Exercise
+# Exercise
 
 For this exercise, you should create and bind a pair of textures whose contents are in BG1 and BG2.  Filtering on the textures should use `gl.NEAREST` and they should be periodic along both axes.
 
 The texture for BG1 should be bound to texture unit 0 and the texture for BG2 should be bound to texture unit 1.
 
-## Texture units
+# Texture units
 
 In order to use more than one texture at a time in a shader, it is necessary to bind the input textures to different texture unit.  A texture unit is basically a slot into which you can store a given texture unit.
 
