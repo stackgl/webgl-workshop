@@ -60,7 +60,7 @@ gl.uniform3fv(colorLocation, [1,0,1])
 There are 16 different `uniform` commands, but they are all variations on the same basic idea:
 
 ## `gl.uniform[1234][fi]?v(location, value)`
-> Sets the value of a uniform.  The number `1234` determines the dimension of the vector which is being set.  For example, `gl.uniform2f` sets the value of `vec2`, while `gl.uniform3f` sets an `vec3`.  `i` or `f` determines whether the uniform is an integer or a float.  `v` determines whether the arguments are passed in directly or using an array.
+> Sets the value of a uniform.  The number `1234` determines the dimension of the vector which is being set.  For example, `gl.uniform2f` sets the value of a `vec2`, while `gl.uniform3f` sets a `vec3`.  `i` or `f` determines whether the uniform is an integer or a float.  `v` determines whether the arguments are passed in individually or using an array.
 
 There is also a special command for updating matrix uniforms:
 
