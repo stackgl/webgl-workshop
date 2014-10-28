@@ -42,10 +42,16 @@ This is the sequel to shader-school.  The goal is to teach the basic WebGL API b
   1. Feedback loop
 1. Blending
 1. Stencil buffer
-1.  Advanced drawing
+  1. basic usage
+  1. shadows?
+1. Advanced buffer tricks
+  1. copyTexImage
+  1. Color mask, depth mask, stencil mask
+  1. depth func
+  1. Reading pixels
+1.  Advanced drawing tricks
   1.  Line width
   1.  Polygon offset
-  1.  Reading pixels
 1.  Extensions
   1. Vertex array objects
   1. Float textures

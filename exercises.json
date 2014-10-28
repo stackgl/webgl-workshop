@@ -14,5 +14,8 @@
   "» TEXTURES: CREATING A TEXTURE": "@exercise/texture-create",
   "» TEXTURES: FILTERING AND WRAPPING": "@exercise/texture-parameters",
   "» TEXTURES: MIPMAPS": "@exercise/texture-mipmaps",
-  "» TEXTURES: MULTITEXTURING": "@exercise/texture-units"
+  "» TEXTURES: MULTITEXTURING": "@exercise/texture-units",
+  "» 3D: THE DEPTH BUFFER": "@exercise/3d-depth-buffer",
+  "» 3D: CLEARING THE DEPTH BUFFER": "@exercise/3d-clear-depth",
+  "» 3D: BACK AND FRONT FACES": "@exercise/3d-front-face"
 }
