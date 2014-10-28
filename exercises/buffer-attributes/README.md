@@ -59,7 +59,7 @@ This method is pretty complicated, so lets unpack how it works:
 
 ## `gl.vertexAttribPointer(location, size, type, normalized, stride, offset)`
 > Sets up an attribute pointer for the attribute at `location` using the vertex buffer currently bound to `gl.ARRAY_BUFFER`:
-* `size` is the size of the attribute in terms of number of elements, eg
+* `size` is the size of the attribute in terms of number of elements, e.g.
     + `size=1` means `float`
     + `size=2` means `vec2`
     + `size=3` means `vec3`

@@ -2,7 +2,7 @@
 
 In this exercise, you should modify the example to enable mipmapping.  Specifically, you should:
 
-* Set the maginification filter to LINEAR
+* Set the magnification filter to LINEAR
 * Set the minification filter to LINEAR_MIPMAP_LINEAR
 * Create a mipmap pyramid
 
@@ -10,9 +10,9 @@ In this exercise, you should modify the example to enable mipmapping.  Specifica
 
 In WebGL textures are often rendered at radically different sizes.  For objects which are far away from the camera, it may be that a single visible fragment covers many different regions within a texture.
 
-One way to prevent this situation would be to render the entire scene at an extremely high resolution, and then downsample it by filtering to get an accurate smooth picture. This technique is called full screen antialiasing, and is commonly applied in geometry.
+One way to prevent this situation would be to render the entire scene at an extremely high resolution, and then downsample it by filtering to get an accurate smooth picture. This technique is called full screen anti-aliasing, and is commonly applied in geometry.
 
-Unfortunately, the problem with full screen antialiasing is that the resolution of the drawing buffer needs to be extremely large in order for it to correctly capture small features (for example textures).
+Unfortunately, the problem with full screen anti-aliasing is that the resolution of the drawing buffer needs to be extremely large in order for it to correctly capture small features (for example textures).
 
 Instead, modern GPUs implement an optimization called mipmapping to support texture rendering for very tiny or distant features.
 

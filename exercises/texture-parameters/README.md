@@ -2,7 +2,7 @@
 
 For this exercise you should configure a texture so that:
 
-* Minification and magnication use linear filtering
+* Minification and magnification use linear filtering
 * The s-axis repeats
 * The t-axis is mirrored
 

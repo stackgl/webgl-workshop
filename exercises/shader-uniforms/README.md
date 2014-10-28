@@ -34,7 +34,7 @@ void main() {
 }
 ```
 
-And that this fragment shader is compiled and linked to a program object which we shalle call `program`.  Then to get the location of the uniform variable `color`, we use the following command in WebGL:
+And that this fragment shader is compiled and linked to a program object which we shall call `program`.  Then to get the location of the uniform variable `color`, we use the following command in WebGL:
 
 ```javascript
 var colorLocation = gl.getUniformLocation(program, 'color')
