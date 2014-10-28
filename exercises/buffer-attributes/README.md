@@ -1,10 +1,8 @@
-# Attribute pointers
-
-## Exercise
+# Exercise
 
 For this lesson, you will be given a vertex buffer and a shader, and you should then set up an attribute pointer and draw the contents of the buffer.  The attribute is a `vec2` at location 0, and the buffer is a densely packed float array.
 
-## Setting up attribute pointers
+# Setting up Attribute Pointers
 
 As we saw in the last lesson, buffers store data for vertex attributes. However, just storing the data is not enough, we also need to tell the vertex shader where it is. This is done with attribute pointers.
 
@@ -48,7 +46,7 @@ gl.enableVertexAttribArray(0)
 
 Which works as follows:
 
-#### `gl.enableVertexAttribArray(location)`
+## `gl.enableVertexAttribArray(location)`
 > Tells WebGL to use an attribute pointer for the attribute at `location`
 
 And once this is done, we can then specify the data of the pointer using the following method:
@@ -59,7 +57,7 @@ gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0)
 
 This method is pretty complicated, so lets unpack how it works:
 
-#### `gl.vertexAttribPointer(location, size, type, normalized, stride, offset)`
+## `gl.vertexAttribPointer(location, size, type, normalized, stride, offset)`
 > Sets up an attribute pointer for the attribute at `location` using the vertex buffer currently bound to `gl.ARRAY_BUFFER`:
 * `size` is the size of the attribute in terms of number of elements, eg
     + `size=1` means `float`

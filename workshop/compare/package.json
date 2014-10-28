@@ -1,9 +1,5 @@
 {
   "name": "@workshop/compare",
   "version": "1.0.0",
-  "dependencies": {
-    "canvas-pixels": "0.0.0",
-    "gl-context": "^0.1.1",
-    "gl-state": "^1.0.0"
-  }
+  "dependencies": {}
 }

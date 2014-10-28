@@ -1,10 +1,8 @@
-# Texture creation
-
-## Exercise
+# Exercise
 
 For this exercise you should create a texture from a given array of pixels and bind the result to texture 2D.  Your texture must not use any filtering.
 
-## Textures
+# Textures
 
 After buffers, the other major way to store data in WebGL is through textures.  Unlike a buffer, it is possible to read any random value from a texture at any point in a shader.
 
@@ -16,7 +14,7 @@ Uploading data to textures follows a similar pattern as buffers.  At a high leve
 1. Then we bind it
 1. Then we send data to it and configure it
 
-### Creation 
+# Texture Creation
 
 Creating a texture is easy enough, we just use the following command:
 
@@ -31,7 +29,7 @@ Like buffers, textures are not garbage collected, so you should also release you
 gl.deleteTexture(texture)
 ```
 
-### Binding textures
+# Binding Textures
 
 Once we have created a texture, we can then bind it to the current texture unit like so:
 
@@ -39,7 +37,7 @@ Once we have created a texture, we can then bind it to the current texture unit 
 gl.bindTexture(gl.TEXTURE_2D, texture)
 ```
 
-### Setting options
+# Setting Options
 
 After the texture is bound, we can then configure various options on the texture using the `gl.texParameteri` and `gl.texParameterf` commands. We will come back to these in the next lesson, but for now you should use the following two commands to turn off filtering on the texture:
 
@@ -48,7 +46,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
 ```
 
-### Uploading image data
+# Uploading Image Data
 
 Finally, we can upload image data into the texture.  This is done by calling `gl.texImage2D`.  This function is pretty complicated, but at a high level it just takes a flattened array of pixels and stores it into the texture:
 

@@ -1,8 +1,8 @@
 # Exercise
 
-Use `gl.clear` to clear the screen twice: the first time, clear the entire
-screen to white. The second time, fill the center of the screen with black
-such that there is a 20-pixel wide white border around the edges.
+Currently your submission is rendering a bunny that is stretched out across
+the entire canvas. Change it to match the example above: we want two bunnies,
+one each covering one half of the screen.
 
 # `gl.viewport`
 

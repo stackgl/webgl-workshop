@@ -1,4 +1,4 @@
-# First challenge: Draw a triangle
+# Exercise
 
 For the first challenge you should combine all the things that you have learned so far about WebGL to draw a single triangle to the screen.
 

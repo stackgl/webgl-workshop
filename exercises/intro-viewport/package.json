@@ -2,6 +2,5 @@
   "name": "@exercise/intro-viewport",
   "version": "1.0.0",
   "main": "server.js",
-  "dependencies": {
-  }
+  "dependencies": {}
 }

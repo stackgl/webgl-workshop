@@ -1,6 +1,4 @@
-# Mipmaps
-
-## Exercise
+# Exercise
 
 In this exercise, you should modify the example to enable mipmapping.  Specifically, you should:
 
@@ -8,7 +6,7 @@ In this exercise, you should modify the example to enable mipmapping.  Specifica
 * Set the minification filter to LINEAR_MIPMAP_LINEAR
 * Create a mipmap pyramid
 
-## About mipmaps
+# Mipmaps
 
 In WebGL textures are often rendered at radically different sizes.  For objects which are far away from the camera, it may be that a single visible fragment covers many different regions within a texture.
 
