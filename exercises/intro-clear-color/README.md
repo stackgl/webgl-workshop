@@ -1,11 +1,5 @@
 # Exercise
-For this exercise, write a method which takes a WebGL context as input and clears the background color to opaque magenta (fully satured red and blue, no green).  To help get started, here is a shell:
-
-```javascript
-exports.draw = function(gl) {
-  //Clear drawing buffer to magenta
-}
-```
+For this exercise, write a method which takes a WebGL context as input and clears the background color to opaque magenta (fully satured red and blue, no green).
 
 # Clearing the Drawing Buffer
 
