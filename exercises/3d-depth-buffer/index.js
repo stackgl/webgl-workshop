@@ -25,7 +25,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
-  , title: 'Indexed Drawing'
+  , title: 'The Depth Buffer'
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.
     return done(null, compare(
