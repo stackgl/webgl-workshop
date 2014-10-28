@@ -68,6 +68,8 @@ function common(opts) {
   assert(opts.solution, '@workshop/common: .solution is missing')
   assert(opts.submission, '@workshop/common: .submission is missing')
 
+  document.title = opts.title
+
   if (opts.title) {
     ui.header.innerHTML = escape(opts.title)
   }
