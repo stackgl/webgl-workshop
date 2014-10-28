@@ -2,7 +2,10 @@
   "name": "webgl-workshop",
   "version": "1.0.0",
   "description": "Boilerplate for frontend-focused NodeSchool lessons",
-  "main": "server.js",
+  "main": "node.js",
+  "bin": {
+    "webgl-workshop": "node.js"
+  },
   "scripts": {
     "start": "linklocal -r && node node.js",
     "update-subdeps": "npm install --save workshop/* exercises/*"
@@ -42,6 +45,7 @@
     "canvas-fit": "^1.2.0",
     "canvas-orbit-camera": "^1.0.0",
     "canvas-pixels": "0.0.0",
+    "chalk": "^0.5.1",
     "cheerio": "^0.17.0",
     "cpr": "^0.3.2",
     "defaultcss": "^1.1.1",
@@ -67,7 +71,9 @@
     "google-fonts": "0.0.0",
     "highlight.js": "^8.3.0",
     "inherits": "^2.0.1",
+    "inquirer": "^0.5.1",
     "marked": "^0.3.2",
+    "minimist": "^1.1.0",
     "minstache": "^1.2.0",
     "mkdirp": "^0.5.0",
     "mousetrap": "0.0.1",
@@ -78,6 +84,7 @@
     "rework": "^1.0.1",
     "rework-plugin-inline": "^1.0.1",
     "sidenote": "^1.0.0",
+    "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
   },
   "devDependencies": {
