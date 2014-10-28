@@ -75,7 +75,7 @@ body, html {
 .eui-icons {
   list-style-type: none;
   position: absolute;
-  top: 0; left: 384px;
+  top: 0; left: 383px;
   margin: 0;
   padding: 0;
 }
@@ -111,7 +111,6 @@ body, html {
 .eui-icons .eui-icon-edit { background-image: inline(edit.svg); }
 .eui-icons .eui-icon-view { background-image: inline(view.svg); }
 .eui-icons .eui-icon-stop { background-image: inline(stop.svg); }
-.eui-icons .eui-icon-stop { background-image: inline(play.svg); }
 
 .eui-content h1,
 .eui-content h2,
@@ -264,7 +263,7 @@ body, html {
   position: absolute;
   top: 0; left: 0;
   padding-left: 1rem;
-  width: 366px;
+  width: 365px;
   height: 47px;
   background: #4A4F5E;
   border-bottom: 2px solid #34363B;
