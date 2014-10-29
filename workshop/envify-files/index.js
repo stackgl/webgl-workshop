@@ -26,8 +26,10 @@ var root = findup.sync(__dirname, 'exercises.json')
  * @param {String} target   - the target directory, i.e. where the student
  *                            submits their answers.
  */
-function envifyFiles(template, target) {
-  var envify = ['-g', '[', require.resolve('envify')]
+function envifyFiles(template, target, bundler) {
+  var envify = {}
+
+  // ['-g', '[', require.resolve('envify')]
 
   fs.readdirSync(template).forEach(function(name) {
     var orig = path.resolve(template, name)
@@ -36,15 +38,15 @@ function envifyFiles(template, target) {
 
     if (!fs.statSync(orig).isFile()) return
 
-    envify.push('--file_'+base, goal)
+    envify['file_' + base] = goal
 
     if (!fs.existsSync(goal))
       fs.createReadStream(orig)
         .pipe(fs.createWriteStream(goal))
   })
 
-  envify.push('--project_root', root)
-  envify.push(']')
+  envify.project_root = root
+  bundler.transform(envify, require.resolve('envify'))
 
-  return envify
+  return bundler
 }
