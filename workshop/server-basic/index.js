@@ -10,6 +10,7 @@ var watchify   = require('watchify')
 var path       = require('path')
 var url        = require('url')
 var fs         = require('fs')
+var bl         = require('bl')
 var st         = require('st')
 
 module.exports = BasicServer
@@ -28,7 +29,24 @@ function BasicServer(dirname) {
       if (uri === '/') req.url = '/index.html'
       if (uri === '/index.js') {
         res.setHeader('content-type', 'text/javascript')
-        return bundler.bundle().pipe(res)
+
+        return bundler.bundle().pipe(bl(function(err, bundle) {
+          if (err) return res.end('document.write(' + JSON.stringify(
+                '<span style="'
+              + 'font-size:12px;'
+              + 'font-family: Inconsolata, mono;'
+              + 'padding: 2rem;'
+              + 'white-space: pre-wrap;'
+              + 'display: block;'
+              + 'line-height: 1.35rem;'
+              + '">'
+              + [err.message, err.stack].join('\n')
+              + '</span>'
+            ) + ')'
+          )
+
+          res.end(bundle)
+        }))
       }
 
       if (serve(req, res)) return
@@ -53,7 +71,10 @@ function BasicServer(dirname) {
       bundler.transform(require.resolve('fresh-require/transform'))
 
       // workaround for strange browserify issue
-      bundler.bundle().on('data', function(){}).resume()
+      bundler.bundle()
+        .on('data', function(){})
+        .on('error', function(){})
+        .resume()
     }
   }
 }
