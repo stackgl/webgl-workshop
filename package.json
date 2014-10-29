@@ -31,6 +31,7 @@
     "@exercise/3d-depth-buffer": "file:exercises/3d-depth-buffer",
     "@exercise/3d-clear-depth": "file:exercises/3d-clear-depth",
     "@exercise/3d-front-face": "file:exercises/3d-front-face",
+    "@exercise/stencil-shadows": "file:exercises/stencil-shadows",
     "@workshop/common": "file:workshop/common",
     "@workshop/compare": "file:workshop/compare",
     "@workshop/envify-files": "file:workshop/envify-files",
