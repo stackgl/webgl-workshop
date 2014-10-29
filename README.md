@@ -5,7 +5,64 @@ webgl-workshop
 [CampJS](http://campjs.com) but until then please feel free to poke around and
 provide feedback if you're interested.*
 
-This is the sequel to shader-school.  The goal is to teach the basic WebGL API by breaking it down into manageable chunks.  Here is a sketch of how this could work:
+This is the sequel to shader-school.  The goal is to teach the basic WebGL API by breaking it down into manageable chunks.
+
+## Other Resources
+
+There are also local copies of the following documentation available in the
+[docs](docs/) directory in this repository.
+
+* [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
+
+## Development
+
+Requires [npm](http://npmjs.org/) `2.x.x`.
+
+``` bash
+git clone git@github.com:hughsk/workshop-app-shell.git
+cd workshop-app-shell
+npm install
+npm start
+```
+
+### Running the Server
+
+``` bash
+npm start
+```
+
+### Building the App
+
+``` bash
+make clean build
+```
+
+### Writing a New Exercise
+
+In this project, each exercise is treated as an *independent* package, i.e. a
+directory with its own `package.json` file, dependencies and so on. You're also
+given almost full control with your exercise – it's essentially just a vanilla
+route handler. See the [`exercises`](exercises) directory for a few existing
+examples.
+
+The steps are as follows:
+
+1. Create a new directory in `exercises`. The name of this directory is not
+   important.
+1. Place a `package.json` file in there, with `main` pointing to `server.js` and
+   the `name` being `@exercise/my-exercise-name`. This name will be used across
+   the app to refer to the exercise in question (feel free to change that last
+   part as you wish).
+1. Copy `exercises/bare/server.js` into your new exercise directory.
+1. Add an entry to `exercises.json`, where the key should be the exercise name
+   as it appears on the menu and the value should be the same `name` property
+   used in your `package.json`.
+1. Run `npm install --save exercises/*` from the project root to update the
+   exercise dependencies.
+
+Next time you run the server you should be good to go!
+
+### Lesson Plan
 
 1. Basic WebGL
   1.  Context creation
@@ -58,55 +115,3 @@ This is the sequel to shader-school.  The goal is to teach the basic WebGL API b
   1. Instanced arrays
   1. Multiple draw buffers
   1. Context loss
-
-## Other Resources
-
-* [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
-
-## Development
-
-Requires [npm](http://npmjs.org/) `2.x.x`.
-
-``` bash
-git clone git@github.com:hughsk/workshop-app-shell.git
-cd workshop-app-shell
-npm install
-npm start
-```
-
-### Running the Server
-
-``` bash
-npm start
-```
-
-### Building the App
-
-``` bash
-make clean build
-```
-
-### Writing a New Exercise
-
-In this project, each exercise is treated as an *independent* package, i.e. a
-directory with its own `package.json` file, dependencies and so on. You're also
-given almost full control with your exercise – it's essentially just a vanilla
-route handler. See the [`exercises`](exercises) directory for a few existing
-examples.
-
-The steps are as follows:
-
-1. Create a new directory in `exercises`. The name of this directory is not
-   important.
-1. Place a `package.json` file in there, with `main` pointing to `server.js` and
-   the `name` being `@exercise/my-exercise-name`. This name will be used across
-   the app to refer to the exercise in question (feel free to change that last
-   part as you wish).
-1. Copy `exercises/bare/server.js` into your new exercise directory.
-1. Add an entry to `exercises.json`, where the key should be the exercise name
-   as it appears on the menu and the value should be the same `name` property
-   used in your `package.json`.
-1. Run `npm install --save exercises/*` from the project root to update the
-   exercise dependencies.
-
-Next time you run the server you should be good to go!
