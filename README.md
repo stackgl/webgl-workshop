@@ -7,6 +7,18 @@ provide feedback if you're interested.*
 
 This is the sequel to shader-school.  The goal is to teach the basic WebGL API by breaking it down into manageable chunks.
 
+## Installation
+
+For now, install globally from GitHub using npm:
+
+``` bash
+[sudo] npm install -g stackgl/webgl-workshop
+webgl-workshop
+```
+
+This will give you a `webgl-workshop` CLI tool, which when running will
+boot up the workshop for you.
+
 ## Other Resources
 
 There are also local copies of the following documentation available in the
