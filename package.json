@@ -89,7 +89,9 @@
     "rework": "^1.0.1",
     "rework-plugin-inline": "^1.0.1",
     "sidenote": "^1.0.0",
+    "st": "^0.5.2",
     "teapot": "^1.0.0",
+    "watchify": "^2.1.0",
     "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
   },
