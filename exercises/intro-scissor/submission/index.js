@@ -5,7 +5,7 @@ exports.init = function(gl) {
 exports.draw = function(gl) {
 
   var w = gl.drawingBufferWidth
-  var h = gl.drawBufferHeight
+  var h = gl.drawingBufferHeight
 
   //Clear background to black
   gl.clearColor(0,0,0,1)
