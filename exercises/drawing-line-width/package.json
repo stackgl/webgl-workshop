@@ -1,0 +1,6 @@
+{
+  "name": "@exercise/drawing-line-width",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {}
+}

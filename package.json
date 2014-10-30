@@ -29,6 +29,7 @@
     "@exercise/buffer-interleaved": "file:exercises/buffer-interleaved",
     "@exercise/challenge-0": "file:exercises/challenge-0",
     "@exercise/challenge-1": "file:exercises/challenge-1",
+    "@exercise/drawing-line-width": "file:exercises/drawing-line-width",
     "@exercise/intro-clear-color": "file:exercises/intro-clear-color",
     "@exercise/intro-hello-webgl": "file:exercises/intro-hello-webgl",
     "@exercise/intro-scissor": "file:exercises/intro-scissor",
