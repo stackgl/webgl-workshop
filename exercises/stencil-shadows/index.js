@@ -2,6 +2,7 @@ var Exercise   = require('@workshop/exercise')
 var compare    = require('@workshop/compare')
 var fresh      = require('fresh-require')
 var fit        = require('canvas-fit')
+var path       = require('path')
 var fs         = require('fs')
 
 // Things for plugging into
@@ -25,7 +26,8 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
-  , title: 'Back and Front Faces'
+  , title: 'Stencil Shadows'
+  , file: path.resolve(process.env.project_root, __dirname.slice(1), 'submission', 'index.js')
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.
     return done(null, compare(
