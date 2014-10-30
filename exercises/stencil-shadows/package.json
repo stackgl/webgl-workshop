@@ -2,8 +2,5 @@
   "name": "@exercise/stencil-shadows",
   "version": "1.0.0",
   "main": "server.js",
-  "dependencies": {
-    "bunny": "^1.0.1",
-    "simplicial-complex": "^1.0.0"
-  }
+  "dependencies": {}
 }
