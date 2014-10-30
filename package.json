@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Boilerplate for frontend-focused NodeSchool lessons",
   "main": "node.js",
+  "license": "MIT",
   "bin": {
     "webgl-workshop": "node.js"
   },
+  "contributors": [
+    "Mikola Lysenko",
+    "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)"
+  ],
   "scripts": {
     "start": "node node.js",
     "dev": "linklocal -r && node node.js --yes --no-open",
@@ -13,7 +18,6 @@
     "update-subdeps": "npm install --save workshop/* exercises/*",
     "pack": "make pack"
   },
-  "license": "MIT",
   "dependencies": {
     "@exercise/3d-clear-depth": "file:exercises/3d-clear-depth",
     "@exercise/3d-depth-buffer": "file:exercises/3d-depth-buffer",
@@ -105,5 +109,29 @@
     "watchify": "^2.1.0",
     "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stackgl/webgl-workshop.git"
+  },
+  "keywords": [
+    "webgl",
+    "stackgl",
+    "workshop",
+    "nodeschool",
+    "learning",
+    "education",
+    "tool",
+    "workshopper",
+    "tutorial",
+    "lesson"
+  ],
+  "bugs": {
+    "url": "https://github.com/stackgl/webgl-workshop/issues"
+  },
+  "homepage": "https://github.com/stackgl/webgl-workshop"
 }

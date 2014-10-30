@@ -35,6 +35,15 @@ There are also local copies of the following documentation available in the
 
 * [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
 
+## Stuck?
+
+Feedback and criticism is welcome, please log your troubles in
+[issues](https://github.com/stackgl/webgl-workshop/issues).
+
+Full curriculum reviews
+[like this one](https://github.com/timoxley/functional-javascript-workshop/issues/7)
+are very helpful. More feedback like this please!
+
 ## Screenshots
 
 ![screenshot](http://i.imgur.com/Bd6c9LL.png)
@@ -169,3 +178,9 @@ Next time you run the server you should be good to go!
   1. Instanced arrays
   1. Multiple draw buffers
   1. Context loss
+
+## License
+
+MIT. See
+[LICENSE.md](https://github.com/stackgl/webgl-workshop/blob/master/LICENSE.md)
+for more details.
