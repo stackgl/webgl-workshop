@@ -77,8 +77,8 @@ function common(opts) {
     ui.header.innerHTML = escape(opts.title)
   }
 
-  var glSub = getContext(opts.canvas, renderSub)
-  var glSol = getContext(ui.solution, renderSol)
+  var glSub = getContext(opts.canvas, {stencil: true}, renderSub)
+  var glSol = getContext(ui.solution, {stencil: true}, renderSol)
   var sol   = opts.solution
   var sub   = opts.submission
   var draw  = opts.draw || passthrough

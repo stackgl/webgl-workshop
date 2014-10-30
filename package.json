@@ -28,6 +28,7 @@
     "@exercise/shader-attributes": "file:exercises/shader-attributes",
     "@exercise/shader-create": "file:exercises/shader-create",
     "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
+    "@exercise/stencil-shadows": "file:exercises/stencil-shadows",
     "@exercise/texture-create": "file:exercises/texture-create",
     "@exercise/texture-mipmaps": "file:exercises/texture-mipmaps",
     "@exercise/texture-parameters": "file:exercises/texture-parameters",
