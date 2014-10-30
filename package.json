@@ -79,6 +79,7 @@
     "highlight.js": "^8.3.0",
     "inherits": "^2.0.1",
     "inquirer": "^0.5.1",
+    "linklocal": "^2.0.1",
     "marked": "^0.3.2",
     "minimist": "^1.1.0",
     "minstache": "^1.2.0",
@@ -100,8 +101,5 @@
     "watchify": "^2.1.0",
     "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
-  },
-  "devDependencies": {
-    "linklocal": "^2.0.1"
   }
 }

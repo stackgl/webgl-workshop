@@ -19,6 +19,15 @@ webgl-workshop
 This will give you a `webgl-workshop` CLI tool, which when running will
 boot up the workshop for you.
 
+If you're having trouble installing directly through npm, try:
+
+``` bash
+git clone git@github.com:stackgl/webgl-workshop.git
+cd webgl-workshop
+npm install
+npm start
+```
+
 ## Other Resources
 
 There are also local copies of the following documentation available in the
