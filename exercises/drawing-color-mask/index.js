@@ -26,7 +26,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
-  , title: 'Line Width'
+  , title: 'Color Mask'
   , file: path.resolve(process.env.project_root, __dirname.slice(1), 'submission', 'index.js')
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.

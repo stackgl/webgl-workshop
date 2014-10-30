@@ -1,4 +1,4 @@
-var setup = require('../submission/setup')
+var setup = require('./setup')
 
 var drawLine
 

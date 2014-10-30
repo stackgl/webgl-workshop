@@ -21,5 +21,6 @@
   "» THE THIRD DIMENSION: BACK AND FRONT FACES": "@exercise/3d-front-face",
   "» SECOND CHALLENGE: A SPINNING CUBE": "@exercise/challenge-1",
   "» ADVANCED DRAWING: LINE WIDTH": "@exercise/drawing-line-width",
+  "» ADVANCED DRAWING: COLOR MASK": "@exercise/drawing-color-mask",
   "» STENCIL: STENCIL SHADOWS": "@exercise/stencil-shadows"
 }
