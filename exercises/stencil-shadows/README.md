@@ -1,20 +1,18 @@
-# Stencil shadows
-
-## Exercise
+# Exercise
 
 In this exercise we will see an advanced use of the stencil buffer, which is shadow rendering.
 
 To help get you started, routines have been provided for drawing the mesh and for rendering the shadow volume.  Specifically, you are provided with the following two methods:
 
-#### `draw.mesh(t, intensity)`
+## `draw.mesh(t, intensity)`
 Draws a mesh at time t with light intensity proportional to the floating point number `intensity`
 
-#### `draw.shadow(t)`
+## `draw.shadow(t)`
 Draws the shadow volume at time t
 
 What you should do for this exercise is render the regions of the mesh which do not intersect the shadow volume at intensity `1`, and the regions inside the shadow volume at intensity `0.1`.
 
-## Stencil shadows
+# Stencil shadows
 
 Stencil shadows provide pixel perfect crisp shadows, and faithfully handle self occlusion and interaction between complex geometries.  The disadvantage is that they only support point and directional light sources (which means no area lights or soft shadows).
 
@@ -27,7 +25,3 @@ At a high level, the algorithm consists of the following steps:
 3.  Render the shadowed mesh over top of the existing mesh wherever the stencil buffer is not equal to 0.
 
 To convince yourself that this works, it is helpful to draw a picture.
-
-
-
-
