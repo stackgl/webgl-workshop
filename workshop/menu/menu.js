@@ -9,7 +9,7 @@ var menu      = require('browser-menu')({
 })
 
 var  name = 'WebGL Workshop'
-var  line = '---------------------------------------------'
+var  line = '-------------------------------------------------------------------'
 var _line = line
 
 menu.reset()

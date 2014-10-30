@@ -1,12 +1,17 @@
 var VERT_SRC = "\
+precision mediump float;\
 attribute vec2 uv;\
+uniform vec2 uScreenSize;\
 \
 void main() {\
-  gl_Position = vec4(uv.x, -uv.y, 0, 1);\
+  vec2 position = vec2(uv.x, -uv.y) * 1.5;\
+  position.x *= uScreenSize.y / uScreenSize.x;\
+  gl_Position = vec4(position, 0, 1);\
 }"
 
 var FRAG_SRC = "\
 precision mediump float;\
+uniform vec2 uScreenSize;\
 \
 void main() {\
   gl_FragColor = vec4(1,1,1,1);\

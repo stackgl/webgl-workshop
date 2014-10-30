@@ -1,20 +1,11 @@
 //This is a helper function to make it easier to get started.
 //You should call this function once your shader is set up
 var drawTriangle = require('./draw-triangle')
+var fs = require('fs')
 
-//This is the source code for the fragment shader
-var FRAG_SRC = "\
-precision mediump float;\
-void main() {\
-  gl_FragColor = vec4(1, 0, 0, 1);\
-}"
-
-//This is the source code for the vertex shader
-var VERT_SRC = "\
-attribute vec2 position;\
-void main() {\
-  gl_Position = vec4(position,0,1);\
-}"
+//Load the fragment/vertex shader sources
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
 
 //TODO: Create this shader in init
 var program

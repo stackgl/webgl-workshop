@@ -3,10 +3,11 @@ var drawIt = require('./draw-it')
 
 var DATA = require('./vertices.json')
 
-var program, buffer
+var program, buffer, uScreenSize
 
 exports.init = function(gl) {
   program = setupShader(gl)
+  uScreenSize = gl.getUniformLocation(program, 'uScreenSize')
 
   buffer = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
@@ -14,11 +15,15 @@ exports.init = function(gl) {
 }
 
 exports.draw = function(gl) {
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
+  var width = gl.drawingBufferWidth
+  var height = gl.drawingBufferHeight
+
+  gl.viewport(0, 0, width, height)
   gl.clearColor(0,0,0,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
   gl.useProgram(program)
+  gl.uniform2f(uScreenSize, width, height)
 
   drawIt(gl, buffer)
 }

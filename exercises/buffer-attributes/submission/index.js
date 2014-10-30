@@ -3,10 +3,11 @@ var setupShader = require('./setup-shader')
 var DATA        = require('./data.json')
 var NUM_VERTS   = (DATA.length/2)|0
 
-var program
+var program, uScreenSize
 
 exports.init = function(gl) {
   program = setupShader(gl)
+  uScreenSize = gl.getUniformLocation(program, 'uScreenSize')
 
   var buffer = gl.createBuffer(gl.ARRAY_BUFFER)
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
@@ -16,11 +17,16 @@ exports.init = function(gl) {
 }
 
 exports.draw = function(gl) {
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  gl.clearColor(1,1,1,1)
+  var width  = gl.drawingBufferWidth
+  var height = gl.drawingBufferHeight
+
+  gl.viewport(0, 0, width, height)
+  gl.clearColor(0,0,0,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
   gl.useProgram(program)
+  gl.uniform2f(uScreenSize, width, height)
 
-  gl.drawArrays(gl.LINES, 0, NUM_VERTS)
+  // TODO: when the buffer is initialized uncomment this line
+  // gl.drawArrays(gl.LINES, 0, NUM_VERTS)
 }

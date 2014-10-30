@@ -7,8 +7,11 @@
     "webgl-workshop": "node.js"
   },
   "scripts": {
-    "start": "linklocal -r && node node.js",
-    "update-subdeps": "npm install --save workshop/* exercises/*"
+    "start": "node node.js",
+    "dev": "linklocal -r && node node.js --yes --no-open",
+    "clean": "rm -rf node_modules {workshop,exercises}/*/node_modules",
+    "update-subdeps": "npm install --save workshop/* exercises/*",
+    "pack": "make pack"
   },
   "license": "MIT",
   "dependencies": {
@@ -29,6 +32,7 @@
     "@exercise/shader-attributes": "file:exercises/shader-attributes",
     "@exercise/shader-create": "file:exercises/shader-create",
     "@exercise/shader-uniforms": "file:exercises/shader-uniforms",
+    "@exercise/stencil-shadows": "file:exercises/stencil-shadows",
     "@exercise/texture-create": "file:exercises/texture-create",
     "@exercise/texture-mipmaps": "file:exercises/texture-mipmaps",
     "@exercise/texture-parameters": "file:exercises/texture-parameters",
@@ -79,6 +83,7 @@
     "highlight.js": "^8.3.0",
     "inherits": "^2.0.1",
     "inquirer": "^0.5.1",
+    "linklocal": "^2.0.1",
     "marked": "^0.3.2",
     "minimist": "^1.1.0",
     "minstache": "^1.2.0",
@@ -93,14 +98,12 @@
     "rework": "^1.0.1",
     "rework-plugin-inline": "^1.0.1",
     "sidenote": "^1.0.0",
+    "simplicial-complex": "^1.0.0",
     "st": "^0.5.2",
     "teapot": "^1.0.0",
-    "watchify": "^2.1.0",
     "unindex-mesh": "^1.0.1",
+    "watchify": "^2.1.0",
     "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
-  },
-  "devDependencies": {
-    "linklocal": "^2.0.1"
   }
 }

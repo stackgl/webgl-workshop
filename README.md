@@ -19,12 +19,31 @@ webgl-workshop
 This will give you a `webgl-workshop` CLI tool, which when running will
 boot up the workshop for you.
 
+If you're having trouble installing directly through npm, try:
+
+``` bash
+git clone git@github.com:stackgl/webgl-workshop.git
+cd webgl-workshop
+npm install
+npm start
+```
+
 ## Other Resources
 
 There are also local copies of the following documentation available in the
 [docs](docs/) directory in this repository.
 
 * [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
+
+## Screenshots
+
+![screenshot](http://i.imgur.com/Bd6c9LL.png)
+
+![screenshot](http://i.imgur.com/FJLt56E.jpg)
+
+![screenshot](http://i.imgur.com/oIsbh9D.jpg)
+
+![screenshot](http://i.imgur.com/9tt3GSv.png)
 
 ## Development
 
@@ -35,6 +54,29 @@ git clone git@github.com:hughsk/workshop-app-shell.git
 cd workshop-app-shell
 npm install
 npm start
+```
+
+### Publishing a New Version
+
+The publish process for webgl-workshop is a little more involved. Before
+publishing, we reinstall and dedupe all of the dependencies before creating
+a tarball with all of the `node_modules` already included.
+
+We then publish the **tarball** instead of the directory, meaning that the
+installation can finish in a single step. This simplifies installing the
+workshop when bandwidth is limited. So when publishing, *make sure to use
+the following instead*:
+
+``` bash
+make publish
+```
+
+The `workshop.tar.gz` file that's generated can also be installed directly
+if you have no internet access whatsoever:
+
+``` bash
+make pack
+npm install ./workshop.tar.gz
 ```
 
 ### Running the Server

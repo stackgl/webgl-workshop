@@ -1,15 +1,18 @@
 var VERT_SRC = "\
 attribute vec2 position;\
+uniform vec2 uScreenSize;\
 \
 void main() {\
-  gl_Position = vec4(position, 0, 1);\
+  vec2 pos = position * 1.5;\
+  pos.x *= uScreenSize.y / uScreenSize.x;\
+  gl_Position = vec4(pos, 0, 1);\
 }"
 
 var FRAG_SRC = "\
 precision mediump float;\
 \
 void main() {\
-  gl_FragColor = vec4(0, 0, 1, 1);\
+  gl_FragColor = vec4(1, 0.882352, 0.41176, 1);\
 }"
 
 function compileShader(gl, type, src) {
@@ -27,6 +30,7 @@ module.exports = function setupShader(gl) {
   gl.attachShader(program, fragShader)
   gl.attachShader(program, vertShader)
   gl.linkProgram(program)
+  gl.lineWidth(2)
 
   return program
 }

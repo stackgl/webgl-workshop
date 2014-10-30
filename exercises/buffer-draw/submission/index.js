@@ -1,27 +1,19 @@
-//These methods are provided for you and handle creating
-//the shader and drawing the contents of the buffer
-var setupShader = require('./setup-shader')
-var drawIt = require('./draw-it')
+var setup = require('./setup')
 
-//This is the data for the outline of the text
-var DATA = require('./vertices.json')
-
-//These variables are initialized in init()
-var program, buffer
+var program, uScreenSize
 
 exports.init = function(gl) {
-  program = setupShader(gl)
-
-  //TODO: Initialize buffer with DATA
+  program = setup(gl)
+  uScreenSize = gl.getUniformLocation(program, 'uScreenSize')
 }
 
 exports.draw = function(gl) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  gl.clearColor(0,0,0,1)
+  gl.clearColor(1,1,1,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
   gl.useProgram(program)
+  gl.uniform2f(uScreenSize, gl.drawingBufferWidth, gl.drawingBufferHeight)
 
-  //TODO: buffer is initialized uncomment this line
-  //drawIt(gl, buffer)
+  // TODO: draw the primitives using gl.drawArrays here.
 }

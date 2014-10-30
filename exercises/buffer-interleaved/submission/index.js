@@ -8,12 +8,12 @@ var setMorphT
 
 exports.init = function(gl) {
   setMorphT = setup(gl)
-  
+
   var buffer = gl.createBuffer(gl.ARRAY_BUFFER)
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
   gl.bufferData(
-    gl.ARRAY_BUFFER, 
-    new Float32Array(VERTS), 
+    gl.ARRAY_BUFFER,
+    new Float32Array(VERTS),
     gl.STATIC_DRAW)
 
   //TODO: Set up vertex attribute pointers
@@ -21,7 +21,7 @@ exports.init = function(gl) {
 
 exports.draw = function(gl) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  gl.clearColor(1,1,1,1)
+  gl.clearColor(0.1,0.1,0.1,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
   //t controls the amount of warp

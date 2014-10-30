@@ -19,5 +19,6 @@
   "» THE THIRD DIMENSION: THE DEPTH BUFFER": "@exercise/3d-depth-buffer",
   "» THE THIRD DIMENSION: CLEARING THE DEPTH BUFFER": "@exercise/3d-clear-depth",
   "» THE THIRD DIMENSION: BACK AND FRONT FACES": "@exercise/3d-front-face",
-  "» SECOND CHALLENGE: A SPINNING CUBE": "@exercise/challenge-1"
+  "» SECOND CHALLENGE: A SPINNING CUBE": "@exercise/challenge-1",
+  "» STENCIL: STENCIL SHADOWS": "@exercise/stencil-shadows"
 }

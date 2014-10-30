@@ -1,12 +1,13 @@
 var VERT_SRC = "\
 attribute vec2 uv;\
 attribute vec3 color;\
+uniform vec2 uScreenSize;\
 \
 varying vec3 fcolor;\
 \
 void main() {\
   fcolor = color;\
-  gl_Position = vec4(uv, 0, 1);\
+  gl_Position = vec4(uv * vec2(uScreenSize.y / uScreenSize.x, 1) * 0.75, 0, 1);\
   gl_PointSize = 5.0;\
 }"
 
@@ -52,12 +53,18 @@ module.exports = function setup(gl) {
     }
   }
 
-  nGon([0,1,0], 3, Math.PI/2.0, 2.0*Math.PI/3)
-  nGon([1,0,0], 32, 0.0, Math.PI/16)
-  nGon([0,0,1], 32, 0.0, 7.0*Math.PI/16)
-  nGon([0,0,1], 32, 7.0*Math.PI/16, 7.0*Math.PI/16)
-  nGon([1,1,0], 32, 0.0, Math.PI/16)
-  nGon([1,0,1], 5, Math.PI/4.0, 2.0*Math.PI/5)
+  var green  = [0x61/0xFF, 0xFF/0xFF, 0x90/0xFF]
+  var yellow = [0xFF/0xFF, 0xE1/0xFF, 0x69/0xFF]
+  var blue   = [0x66/0xFF, 0xC4/0xFF, 0xFF/0xFF]
+  var red    = [0xFF/0xFF, 0x6F/0xFF, 0x5C/0xFF]
+  var grey   = [0xA9/0xFF, 0xB0/0xFF, 0xC2/0xFF]
+
+  nGon(yellow, 3, Math.PI/2.0, 2.0*Math.PI/3)
+  nGon(red, 32, 0.0, Math.PI/16)
+  nGon(blue, 32, 0.0, 7.0*Math.PI/16)
+  nGon(blue, 32, 7.0*Math.PI/16, 7.0*Math.PI/16)
+  nGon(grey, 32, 0.0, Math.PI/16)
+  nGon(green, 5, Math.PI/4.0, 2.0*Math.PI/5)
 
   var buffer = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
@@ -68,4 +75,7 @@ module.exports = function setup(gl) {
 
   gl.enableVertexAttribArray(1)
   gl.vertexAttribPointer(1, 3, gl.FLOAT, false, 20, 8)
+  gl.lineWidth(1.5)
+
+  return program
 }
