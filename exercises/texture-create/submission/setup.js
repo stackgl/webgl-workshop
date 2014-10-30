@@ -2,11 +2,13 @@ var VERT_SRC = "\
 precision mediump float;\
 \
 attribute vec2 position;\
+uniform vec2 uScreenSize;\
 \
 varying vec2 uv;\
 \
 void main() {\
-  uv = 0.5 * vec2(position.x + 1.0, 1.0 - position.y);\
+  vec2 pos = position * vec2(uScreenSize.x / uScreenSize.y, 1);\
+  uv = 0.5 * vec2(pos.x + 1.0, 1.0 - pos.y);\
   gl_Position = vec4(position, 0, 1);\
 }"
 
@@ -42,6 +44,7 @@ module.exports = function setupShader(gl) {
   gl.useProgram(program)
 
   var uImage = gl.getUniformLocation(program, 'image')
+  var uScreenSize = gl.getUniformLocation(program, 'uScreenSize')
   gl.uniform1i(uImage, 0)
 
   var buffer = gl.createBuffer(gl.ARRAY_BUFFER)
@@ -58,8 +61,9 @@ module.exports = function setupShader(gl) {
   gl.viewport(0,0,gl.drawingBufferWidth, gl.drawingBufferHeight)
 
   gl.activeTexture(gl.TEXTURE0)
-  
+
   return function() {
+    gl.uniform2f(uScreenSize, gl.drawingBufferWidth, gl.drawingBufferHeight)
     gl.drawArrays(gl.TRIANGLES, 0, 3)
   }
 }
