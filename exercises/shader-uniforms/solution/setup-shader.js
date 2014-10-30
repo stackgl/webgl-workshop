@@ -1,21 +1,7 @@
-var VERT_SRC = "\
-attribute vec2 uv;\
-\
-uniform vec2 offset;\
-uniform float scale;\
-\
-void main() {\
-  gl_Position = vec4(uv * scale + offset, 0, 1);\
-}"
+var fs = require('fs')
 
-var FRAG_SRC = "\
-precision mediump float;\
-\
-uniform vec3 color;\
-\
-void main() {\
-  gl_FragColor = vec4(color, 1);\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
