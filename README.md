@@ -56,6 +56,29 @@ npm install
 npm start
 ```
 
+### Publishing a New Version
+
+The publish process for webgl-workshop is a little more involved. Before
+publishing, we reinstall and dedupe all of the dependencies before creating
+a tarball with all of the `node_modules` already included.
+
+We then publish the **tarball** instead of the directory, meaning that the
+installation can finish in a single step. This simplifies installing the
+workshop when bandwidth is limited. So when publishing, *make sure to use
+the following instead*:
+
+``` bash
+make publish
+```
+
+The `workshop.tar.gz` file that's generated can also be installed directly
+if you have no internet access whatsoever:
+
+``` bash
+make pack
+npm install ./workshop.tar.gz
+```
+
 ### Running the Server
 
 ``` bash

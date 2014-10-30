@@ -3,7 +3,7 @@ APPNAME := WebGL\ Workshop
 OSXDEST := build/osx/$(APPNAME).app
 OSXFILE := $(OSXDEST)/Contents/Resources/app.nw
 
-.PHONY: build/osx clean pack
+.PHONY: build/osx clean pack publish
 
 pack:
 	npm run clean
@@ -23,6 +23,9 @@ pack:
 		| grep -v workshop.tar.gz \
 		| tar -cvzf workshop.tar.gz -T -
 	mv _package.json package.json
+
+publish: pack
+	npm publish ./workshop.tar.gz
 
 purge: clean
 	rm -rf node_modules; true
