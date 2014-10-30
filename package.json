@@ -7,8 +7,11 @@
     "webgl-workshop": "node.js"
   },
   "scripts": {
-    "start": "linklocal -r && node node.js",
-    "update-subdeps": "npm install --save workshop/* exercises/*"
+    "start": "node node.js",
+    "dev": "linklocal -r && node node.js --yes --no-open",
+    "clean": "rm -rf node_modules {workshop,exercises}/*/node_modules",
+    "update-subdeps": "npm install --save workshop/* exercises/*",
+    "pack": "make pack"
   },
   "license": "MIT",
   "dependencies": {

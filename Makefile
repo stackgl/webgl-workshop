@@ -3,7 +3,26 @@ APPNAME := WebGL\ Workshop
 OSXDEST := build/osx/$(APPNAME).app
 OSXFILE := $(OSXDEST)/Contents/Resources/app.nw
 
-.PHONY: build/osx clean
+.PHONY: build/osx clean pack
+
+pack:
+	npm run clean
+	npm install
+	npm dedupe
+	cp package.json _package.json
+	node lib/pack
+	find . -type file \
+		| grep -v ./app/ \
+		| grep -v ./.git/ \
+		| grep -v ./answers/ \
+		| grep -v ./lessons/ \
+		| grep -v ./workshop/ \
+		| grep -v ./exercises/ \
+		| grep -v ./_package.json \
+		| grep -v ./Makefile \
+		| grep -v workshop.tar.gz \
+		| tar -cvzf workshop.tar.gz -T -
+	mv _package.json package.json
 
 purge: clean
 	rm -rf node_modules; true
