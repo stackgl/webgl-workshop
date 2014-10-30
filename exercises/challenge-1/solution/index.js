@@ -1,4 +1,4 @@
-var DATA = require('../submission/data.json')
+var DATA = require('./data.json')
 
 var VERTICES = DATA.VERTICES
 var ELEMENTS = DATA.ELEMENTS
@@ -37,13 +37,13 @@ void main() {\
   gl_FragColor = texture2D(texture, fuv);\
 }"
 
-var program, 
-    uCamera, 
+var program,
+    uCamera,
     uTexture,
-    vbuffer, 
-    ebuffer, 
+    vbuffer,
+    ebuffer,
     texture
-    
+
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
   gl.shaderSource(shader, src)
@@ -52,6 +52,7 @@ function compileShader(gl, type, src) {
 }
 
 exports.init = function(gl) {
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.enable(gl.DEPTH_TEST)
 
   var frag = compileShader(gl, gl.FRAGMENT_SHADER, FRAG_SRC)
@@ -68,8 +69,8 @@ exports.init = function(gl) {
 
   buffer = gl.createBuffer(gl.ARRAY_BUFFER)
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-  gl.bufferData(gl.ARRAY_BUFFER, 
-    new Float32Array(VERTICES), 
+  gl.bufferData(gl.ARRAY_BUFFER,
+    new Float32Array(VERTICES),
     gl.STATIC_DRAW)
 
   gl.enableVertexAttribArray(0)
@@ -87,13 +88,13 @@ exports.init = function(gl) {
   texture = gl.createTexture(gl.TEXTURE_2D)
   gl.bindTexture(gl.TEXTURE_2D, texture)
   gl.texImage2D(
-    gl.TEXTURE_2D, 
-    0, 
-    gl.RGBA, 
-    WIDTH, 
-    HEIGHT, 
-    0, 
-    gl.RGBA, 
+    gl.TEXTURE_2D,
+    0,
+    gl.RGBA,
+    WIDTH,
+    HEIGHT,
+    0,
+    gl.RGBA,
     gl.UNSIGNED_BYTE,
     new Uint8Array(PIXELS))
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR)
