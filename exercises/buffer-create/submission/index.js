@@ -27,6 +27,6 @@ exports.draw = function(gl) {
   gl.useProgram(program)
   gl.uniform2f(uScreenSize, width, height)
 
-  //TODO: buffer is initialized uncomment this line
+  //TODO: when the buffer is initialized uncomment this line
   //drawIt(gl, buffer)
 }
