@@ -26,6 +26,16 @@ There are also local copies of the following documentation available in the
 
 * [WebGL Quick Reference Card](https://www.khronos.org/files/webgl/webgl-reference-card-1_0.pdf)
 
+## Screenshots
+
+![screenshot](http://i.imgur.com/Bd6c9LL.png)
+
+![screenshot](http://i.imgur.com/FJLt56E.jpg)
+
+![screenshot](http://i.imgur.com/oIsbh9D.jpg)
+
+![screenshot](http://i.imgur.com/9tt3GSv.png)
+
 ## Development
 
 Requires [npm](http://npmjs.org/) `2.x.x`.
