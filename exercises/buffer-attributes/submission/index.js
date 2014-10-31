@@ -28,5 +28,5 @@ exports.draw = function(gl) {
   gl.uniform2f(uScreenSize, width, height)
 
   // TODO: when the buffer is initialized uncomment this line
-  // gl.drawArrays(gl.LINES, 0, NUM_VERTS)
+  // gl.drawArrays(gl.TRIANGLES, 0, NUM_VERTS)
 }
