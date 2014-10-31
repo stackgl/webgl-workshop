@@ -30,9 +30,13 @@ var gl = require('@workshop/common')({
   , file: path.resolve(process.env.project_root, __dirname.slice(1), 'submission', 'index.js')
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.
+    var start = Date.now()
+
     return done(null, compare(
         fresh('./solution')
       , fresh(process.env.file_index_js)
+      , { draw: function(gl, fn) { fn.call(gl, gl, start) }
+        , init: function(gl, fn) { fn.call(gl, gl, start) } }
     , 5) >= 0.99)
   }
 })
