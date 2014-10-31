@@ -1,6 +1,6 @@
 {
   "name": "webgl-workshop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for frontend-focused NodeSchool lessons",
   "main": "node.js",
   "license": "MIT",
