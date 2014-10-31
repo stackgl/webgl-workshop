@@ -1,5 +1,7 @@
 # Exercise
 
+Draw 4 overlapping rectangles with additive blending and the weight `gl.SRC_ALPHA` for the source fragment and `gl.ONE_MINUS_SRC_ALPHA` for the destination fragment.
+
 # Blending
 
 In WebGL, blending combines the contents of the currently rendered fragment with the color value stored in the drawing buffer to compute a new color value.
