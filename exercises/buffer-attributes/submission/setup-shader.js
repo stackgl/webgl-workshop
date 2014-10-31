@@ -1,19 +1,7 @@
-var VERT_SRC = "\
-attribute vec2 position;\
-uniform vec2 uScreenSize;\
-\
-void main() {\
-  vec2 pos = position * 1.5;\
-  pos.x *= uScreenSize.y / uScreenSize.x;\
-  gl_Position = vec4(pos, 0, 1);\
-}"
+var fs = require('fs')
 
-var FRAG_SRC = "\
-precision mediump float;\
-\
-void main() {\
-  gl_FragColor = vec4(1, 0.882352, 0.41176, 1);\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
