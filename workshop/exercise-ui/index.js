@@ -1,5 +1,4 @@
 var findup    = require('findup-element')
-var fonts     = require('google-fonts')
 var escape    = require('escape-html')
 var css       = require('defaultcss')
 var mousetrap = require('mousetrap')
@@ -23,7 +22,6 @@ function ExerciseUI() {
 
   var self = this
 
-  fonts.add({ 'Inconsolata': true })
   css(null, fs.readFileSync(__dirname + '/bundle.css', 'utf8'))
 
   this.tooltip = document.createElement('div')

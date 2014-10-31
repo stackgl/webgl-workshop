@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'inconsolata';
+  src: url('/fonts/inconsolata-regular-webfont.eot');
+  src: url('/fonts/inconsolata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/inconsolata-regular-webfont.woff2') format('woff2'),
+         url('/fonts/inconsolata-regular-webfont.woff') format('woff'),
+         url('/fonts/inconsolata-regular-webfont.ttf') format('truetype'),
+         url('/fonts/inconsolata-regular-webfont.svg#inconsolataregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inconsolata';
+  src: url('/fonts/inconsolata-bold-webfont.eot');
+  src: url('/fonts/inconsolata-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/inconsolata-bold-webfont.woff2') format('woff2'),
+         url('/fonts/inconsolata-bold-webfont.woff') format('woff'),
+         url('/fonts/inconsolata-bold-webfont.ttf') format('truetype'),
+         url('/fonts/inconsolata-bold-webfont.svg#inconsolatabold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body,
 html {
   padding: 0;
@@ -20,7 +44,7 @@ html {
 .eui,
 .eui pre,
 .eui code {
-  font-family: Inconsolata;
+  font-family: inconsolata, mono;
 }
 
 .eui header {
@@ -347,7 +371,7 @@ html {
   padding: 14px;
   box-sizing: border-box;
   background: 0;
-  font-family: Inconsolata, mono;
+  font-family: inconsolata, mono;
   text-align: center;
   color: #DEE7FF;
 }
