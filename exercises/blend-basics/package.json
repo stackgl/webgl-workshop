@@ -1,0 +1,6 @@
+{
+  "name": "@exercise/blend-basics",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {}
+}

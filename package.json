@@ -23,6 +23,7 @@
     "@exercise/3d-depth-buffer": "file:exercises/3d-depth-buffer",
     "@exercise/3d-front-face": "file:exercises/3d-front-face",
     "@exercise/3d-cull-face": "file:exercises/3d-cull-face",
+    "@exercise/blend-basics": "file:exercises/blend-basics",
     "@exercise/buffer-attributes": "file:exercises/buffer-attributes",
     "@exercise/buffer-create": "file:exercises/buffer-create",
     "@exercise/buffer-draw": "file:exercises/buffer-draw",

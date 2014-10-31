@@ -23,5 +23,6 @@
   "» SECOND CHALLENGE: A SPINNING CUBE": "@exercise/challenge-1",
   "» ADVANCED DRAWING: LINE WIDTH": "@exercise/drawing-line-width",
   "» ADVANCED DRAWING: COLOR MASK": "@exercise/drawing-color-mask",
+  "» BLENDING: BASICS": "@exercise/blend-basics",
   "» STENCIL: STENCIL SHADOWS": "@exercise/stencil-shadows"
 }
