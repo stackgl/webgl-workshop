@@ -18,14 +18,9 @@ bunny = {
 
 bunny.normals = faces(bunny.positions)
 
-module.exports = drawBunny
+module.exports = createBunny
 
 var start = Date.now()
-
-function drawBunny(gl) {
-  gl.__BUNNY__ = gl.__BUNNY__ || createBunny(gl)
-  gl.__BUNNY__(gl)
-}
 
 function createBunny(gl) {
   var proj = mat4.create()
@@ -76,7 +71,7 @@ function createBunny(gl) {
     , []
   )
 
-  return function() {
+  return function(gl, t) {
     var width  = gl.drawingBufferWidth
     var height = gl.drawingBufferHeight
 
@@ -93,7 +88,7 @@ function createBunny(gl) {
     )
 
     quat.identity(camera.rotation)
-    quat.rotateY(camera.rotation, camera.rotation, (Date.now() - start) * 0.001)
+    quat.rotateY(camera.rotation, camera.rotation, t * 0.001)
     camera.distance = 20
     camera.center = [0, 4, 0]
     camera.view(view)

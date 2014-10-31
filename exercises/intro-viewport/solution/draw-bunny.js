@@ -10,9 +10,7 @@ var mat4   = require('gl-matrix').mat4
 var quat   = require('gl-matrix').quat
 var bunny  = require('bunny')
 
-module.exports = drawBunny
-
-var start = Date.now()
+module.exports = createBunny
 
 function drawBunny(gl) {
   gl.__BUNNY__ = gl.__BUNNY__ || createBunny(gl)
@@ -64,7 +62,7 @@ function createBunny(gl) {
     , []
   )
 
-  return function() {
+  return function(gl, t) {
     geom.bind(shader)
 
     mat4.perspective(proj
@@ -75,7 +73,7 @@ function createBunny(gl) {
     )
 
     quat.identity(camera.rotation)
-    quat.rotateY(camera.rotation, camera.rotation, (Date.now() - start) * 0.001)
+    quat.rotateY(camera.rotation, camera.rotation, t * 0.001)
     camera.distance = 20
     camera.center = [0, 4, 0]
     camera.view(view)

@@ -1,5 +1,10 @@
-var drawBunny = require('./draw-bunny')
+var createBunny = require('./draw-bunny')
+var drawBunny
 
-exports.draw = function(gl) {
-  drawBunny(gl)
+exports.init = function(gl, t) {
+  drawBunny = createBunny(gl)
+}
+
+exports.draw = function(gl, t) {
+  drawBunny(gl, t)
 }
