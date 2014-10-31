@@ -1,42 +1,8 @@
 var VERTICES = require('./data.json')
+var fs       = require('fs')
 
-var VERT_SRC = "\
-precision mediump float;\
-attribute vec3 position;\
-attribute vec3 normal;\
-\
-uniform float t;\
-\
-varying vec3 light;\
-varying vec3 coord;\
-\
-void main() {\
-  light = normal;\
-  float c = cos(t);\
-  float s = sin(t);\
-  coord = position;\
-  vec3 lcoord = vec3(\
-    c*position.x-s*position.z,\
-    position.y,\
-    c*position.z+s*position.x+0.5);\
-  gl_Position = vec4(lcoord,1);\
-}"
-
-var FRAG_SRC = "\
-precision mediump float;\
-\
-varying vec3 light;\
-varying vec3 coord;\
-\
-void main() {\
-  float x = max(light.x,0.0);\
-  float y = max(-light.x,0.0);\
-  if(gl_FrontFacing) {\
-    gl_FragColor = vec4(0.6+x+max(-light.y,0.0),x,-2.0*coord.z+x,1);\
-  } else {\
-    gl_FragColor = vec4(y+max(light.y,0.0),0.6+y+0.2*max(light.y,0.0),-2.0*coord.z+y,1);\
-  }\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
@@ -65,8 +31,8 @@ module.exports = function setup(gl) {
 
   var buffer = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
-  gl.bufferData(gl.ARRAY_BUFFER, 
-    new Float32Array(VERTICES), 
+  gl.bufferData(gl.ARRAY_BUFFER,
+    new Float32Array(VERTICES),
     gl.STATIC_DRAW)
 
   gl.enableVertexAttribArray(0)
