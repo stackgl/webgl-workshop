@@ -39,7 +39,7 @@ optimize:
 	npm install --production
 	npm dedupe
 
-build: optimize build/osx
+build: build/osx
 build/osx: $(OSXFILE)
 
 build/downloads/osx.zip:
