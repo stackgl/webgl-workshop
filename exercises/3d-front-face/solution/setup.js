@@ -1,45 +1,8 @@
 var VERTICES = require('./data.json')
+var fs       = require('fs')
 
-var VERT_SRC = "\
-precision mediump float;\
-attribute vec3 position;\
-attribute vec3 normal;\
-\
-uniform float t;\
-\
-varying float light;\
-varying vec3 coord;\
-\
-void main() {\
-  light = normal.x;\
-  float c = cos(t);\
-  float s = sin(t);\
-  coord = position;\
-  vec3 lcoord = vec3(\
-    c*position.x-s*position.z,\
-    position.y,\
-    c*position.z+s*position.x+0.5);\
-  gl_Position = vec4(lcoord,1);\
-}"
-
-var FRAG_SRC = "\
-precision mediump float;\
-\
-varying float light;\
-varying vec3 coord;\
-\
-void main() {\
-  if(coord.z < 0.0) {\
-    discard;\
-  }\
-  float x = max(light,0.0);\
-  float y = max(-light,0.0);\
-  if(gl_FrontFacing) {\
-    gl_FragColor = vec4(0.6+x,x,x,1);\
-  } else {\
-    gl_FragColor = vec4(y,0.6+y,y,1);\
-  }\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
