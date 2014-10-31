@@ -1,27 +1,7 @@
-var VERT_SRC = "\
-precision mediump float;\
-\
-attribute vec2 position;\
-\
-uniform vec2 scale;\
-\
-varying vec2 uv;\
-\
-void main() {\
-  uv = 0.5 * vec2(scale.x*position.x + 1.0, 1.0 - scale.y*position.y);\
-  gl_Position = vec4(position, 0, 1);\
-}"
+var fs = require('fs')
 
-var FRAG_SRC = "\
-precision mediump float;\
-\
-uniform sampler2D image;\
-\
-varying vec2 uv;\
-\
-void main() {\
-  gl_FragColor = texture2D(image, uv);\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
@@ -63,9 +43,9 @@ module.exports = function setupShader(gl) {
   gl.viewport(0,0,gl.drawingBufferWidth, gl.drawingBufferHeight)
 
   gl.activeTexture(gl.TEXTURE0)
-  
+
   return function(t) {
-    gl.uniform2f(uScale, 
+    gl.uniform2f(uScale,
       5*(Math.cos(0.001*t)+1.1),
       2.5*(Math.sin(0.007*t+0.1455)+1.05))
     gl.drawArrays(gl.TRIANGLES, 0, 3)
