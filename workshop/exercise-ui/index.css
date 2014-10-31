@@ -15,7 +15,7 @@ body, html {
 }
 
 .eui, .eui pre, .eui code {
-  font-family: Inconsolata;
+  font-family: Inconsolata, mono;
 }
 
 .eui header {
