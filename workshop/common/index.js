@@ -184,5 +184,5 @@ function annotateJS(code) {
 }
 
 function passthrough(gl, fn) {
-  return fn.call(gl, gl)
+  return fn.call(gl, gl, Date.now())
 }
