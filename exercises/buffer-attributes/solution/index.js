@@ -27,5 +27,5 @@ exports.draw = function(gl) {
 
   gl.useProgram(program)
   gl.uniform2f(uScreenSize, width, height)
-  gl.drawArrays(gl.LINES, 0, NUM_VERTS)
+  gl.drawArrays(gl.TRIANGLES, 0, NUM_VERTS)
 }

@@ -19,6 +19,10 @@
   "» THE THIRD DIMENSION: THE DEPTH BUFFER": "@exercise/3d-depth-buffer",
   "» THE THIRD DIMENSION: CLEARING THE DEPTH BUFFER": "@exercise/3d-clear-depth",
   "» THE THIRD DIMENSION: BACK AND FRONT FACES": "@exercise/3d-front-face",
+  "» THE THIRD DIMENSION: FACE CULLING": "@exercise/3d-cull-face",
   "» SECOND CHALLENGE: A SPINNING CUBE": "@exercise/challenge-1",
+  "» ADVANCED DRAWING: LINE WIDTH": "@exercise/drawing-line-width",
+  "» ADVANCED DRAWING: COLOR MASK": "@exercise/drawing-color-mask",
+  "» BLENDING: BASICS": "@exercise/blend-basics",
   "» STENCIL: STENCIL SHADOWS": "@exercise/stencil-shadows"
 }
