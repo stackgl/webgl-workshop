@@ -184,3 +184,8 @@ Next time you run the server you should be good to go!
 MIT. See
 [LICENSE.md](https://github.com/stackgl/webgl-workshop/blob/master/LICENSE.md)
 for more details.
+
+Many thanks to [Raph Levien](http://en.wikipedia.org/wiki/Inconsolata) for
+designing [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) which
+is used in this project, and licensed under the
+[SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
