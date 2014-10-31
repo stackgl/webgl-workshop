@@ -17,6 +17,10 @@ module.exports = function setupShader(gl) {
   var program = gl.createProgram()
   gl.attachShader(program, fragShader)
   gl.attachShader(program, vertShader)
+  // Forcing the attributes to be set up as bunk, as we can't
+  // always guarantee they'll be bunk on every device.
+  gl.bindAttribLocation(program, 1, 'position')
+  gl.bindAttribLocation(program, 0, 'color')
   gl.linkProgram(program)
 
   return program
