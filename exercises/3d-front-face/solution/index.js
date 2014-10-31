@@ -1,4 +1,4 @@
-var setup         = require('../submission/setup')
+var setup         = require('./setup')
 var drawIt
 
 exports.init = function(gl) {
@@ -6,7 +6,7 @@ exports.init = function(gl) {
   gl.frontFace(gl.CW)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  drawIt(Date.now())
+  drawIt(t)
 }

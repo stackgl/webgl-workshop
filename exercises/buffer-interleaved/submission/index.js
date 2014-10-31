@@ -19,7 +19,7 @@ exports.init = function(gl) {
   //TODO: Set up vertex attribute pointers
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(0.1,0.1,0.1,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
@@ -27,7 +27,7 @@ exports.draw = function(gl) {
   //t controls the amount of warp
   // 0 = bush
   // 1 = obama
-  var t = 0.5 * (1.0 + Math.cos(0.001 * Date.now()))
+  var t = 0.5 * (1.0 + Math.cos(0.001 * t))
   setMorphT(t)
 
   gl.drawArrays(gl.TRIANGLES, 0, NUM_VERTS)

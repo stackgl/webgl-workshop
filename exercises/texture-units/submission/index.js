@@ -16,7 +16,7 @@ exports.init = function(gl) {
   // BG2 should be bound on texture unit 1
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  drawIt(Date.now())
+  drawIt(t)
 }

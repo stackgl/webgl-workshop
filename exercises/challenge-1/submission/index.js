@@ -22,13 +22,12 @@ function cameraMatrix(t) {
 exports.init = function(gl) {
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(1,1,0,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
-  var t = Date.now()
   var camera = cameraMatrix(t)
 
-  //TODO: Draw a cube with the given camera matrix
+  //TODO: Draw a cube with the camera matrix supplied above
 }

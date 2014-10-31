@@ -102,11 +102,10 @@ exports.init = function(gl) {
   gl.generateMipmap(gl.TEXTURE_2D)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.clearColor(1,1,0,1)
   gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT)
 
-  var t = Date.now()
   var camera = cameraMatrix(t)
 
   gl.useProgram(program)

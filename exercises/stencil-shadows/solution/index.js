@@ -5,15 +5,13 @@ exports.init = function(gl) {
   draw = setup(gl)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(1,1,1,1)
   gl.clearDepth(1)
   gl.clear(
-    gl.COLOR_BUFFER_BIT | 
+    gl.COLOR_BUFFER_BIT |
     gl.DEPTH_BUFFER_BIT)
-
-  var t = Date.now()
 
   //----First pass: Draw mesh, no stencil buffer
 
@@ -31,7 +29,7 @@ exports.draw = function(gl) {
   //Draw mesh with full light intensity
   draw.mesh(t, 1.0)
 
-  
+
   //---Second pass: Draw to stencil buffer
 
   //Set up depth buffer
@@ -46,7 +44,7 @@ exports.draw = function(gl) {
   gl.stencilFunc(gl.ALWAYS, 0, ~0)
   gl.stencilOpSeparate(gl.BACK, gl.KEEP, gl.INCR_WRAP, gl.KEEP)
   gl.stencilOpSeparate(gl.FRONT, gl.KEEP, gl.DECR_WRAP, gl.KEEP)
-  
+
   //Set up color buffer
   gl.colorMask(false,false,false,false)
 

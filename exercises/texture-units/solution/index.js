@@ -20,32 +20,32 @@ function createTexture(gl, img) {
     gl.RGBA,
     gl.UNSIGNED_BYTE,
     new Uint8Array(img))
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_MIN_FILTER, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
     gl.NEAREST)
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_MAG_FILTER, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_MAG_FILTER,
     gl.NEAREST)
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_WRAP_S, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_WRAP_S,
     gl.REPEAT)
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_WRAP_T, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_WRAP_T,
     gl.REPEAT)
   return texture
 }
 
 exports.init = function(gl) {
   drawIt = setup(gl)
-  
+
   gl.activeTexture(gl.TEXTURE0)
   createTexture(gl, BG1)
-  
+
   gl.activeTexture(gl.TEXTURE0+1)
-  createTexture(gl, BG2) 
+  createTexture(gl, BG2)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  drawIt(Date.now())
+  drawIt(t)
 }

@@ -9,7 +9,7 @@ exports.init = function(gl) {
   drawIt = setup(gl)
 
   var texture = gl.createTexture()
-  
+
   gl.bindTexture(gl.TEXTURE_2D, texture)
 
   gl.texImage2D(gl.TEXTURE_2D,
@@ -22,24 +22,24 @@ exports.init = function(gl) {
     gl.UNSIGNED_BYTE,
     new Uint8Array(PIXELS))
 
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_MIN_FILTER, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_MIN_FILTER,
     gl.LINEAR)
 
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_MAG_FILTER, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_MAG_FILTER,
     gl.LINEAR)
 
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_WRAP_S, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_WRAP_S,
     gl.REPEAT)
 
-  gl.texParameteri(gl.TEXTURE_2D, 
-    gl.TEXTURE_WRAP_T, 
+  gl.texParameteri(gl.TEXTURE_2D,
+    gl.TEXTURE_WRAP_T,
     gl.MIRRORED_REPEAT)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
-  drawIt(Date.now())
+  drawIt(t)
 }

@@ -10,12 +10,12 @@ exports.init = function(gl) {
   //TODO: Set up the element array buffer here
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(1,1,1,1)
   gl.clear(gl.COLOR_BUFFER_BIT)
 
-  setAngle(0.003 * Date.now())
+  setAngle(0.003 * t)
 
   //TODO: Draw the elements here
 }

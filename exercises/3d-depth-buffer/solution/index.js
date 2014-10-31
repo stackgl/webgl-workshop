@@ -6,9 +6,9 @@ exports.init = function(gl) {
   gl.enable(gl.DEPTH_TEST)
 }
 
-exports.draw = function(gl) {
+exports.draw = function(gl, t) {
   gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
   gl.clearColor(1,1,1,1)
   gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT)
-  drawIt(Date.now())
+  drawIt(t)
 }
