@@ -1,28 +1,7 @@
-var VERT_SRC = "\
-precision mediump float;\
-\
-attribute vec2 position;\
-\
-varying vec2 uv;\
-\
-void main() {\
-  uv = 0.5 * vec2(1.0+position.x, 1.0-position.y);\
-  gl_Position = vec4(position, 0, 1);\
-}"
+var fs = require('fs')
 
-var FRAG_SRC = "\
-precision mediump float;\
-\
-uniform sampler2D bg1, bg2;\
-uniform float scroll;\
-\
-varying vec2 uv;\
-\
-void main() {\
-  vec4 a = texture2D(bg1, vec2(uv.x + scroll, uv.y));\
-  vec4 b = texture2D(bg2, uv);\
-  gl_FragColor = a*(1.0-b.a) + b;\
-}"
+var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
