@@ -6,9 +6,9 @@ OSXFILE := $(OSXDEST)/Contents/Resources/app.nw
 .PHONY: build/osx clean pack publish
 
 pack:
-	npm run clean
-	npm install
-	npm dedupe
+	# npm run clean
+	# npm install
+	# npm dedupe
 	cp package.json _package.json
 	node lib/pack
 	find . -type file \
