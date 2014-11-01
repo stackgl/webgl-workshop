@@ -1,6 +1,6 @@
 # webgl-workshop
 
-[![NPM](https://nodei.co/npm/shader-school.png?downloads=true&stars=true)](https://nodei.co/npm/shader-school/)
+[![NPM](https://nodei.co/npm/webgl-workshop.png?downloads=true&stars=true)](https://nodei.co/npm/webgl-workshop/)
 
 **Learn the basics of WebGL in small, manageable chunks. The sequel to
 [shader-school](http://github.com/stackgl/shader-school), created for
