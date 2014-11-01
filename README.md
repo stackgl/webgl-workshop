@@ -18,7 +18,7 @@ is included with node:
 After that completes, you should be able to run the workshopper with the command:
 
 ``` bash
-shader-school
+webgl-workshop
 ```
 
 The script will ask you if you want to create an answer directory, press `y` to
