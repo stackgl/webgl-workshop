@@ -1,6 +1,6 @@
 # webgl-workshop
 
-[![NPM](https://nodei.co/npm/shader-school.png?downloads=true&stars=true)](https://nodei.co/npm/shader-school/)
+[![NPM](https://nodei.co/npm/webgl-workshop.png?downloads=true&stars=true)](https://nodei.co/npm/webgl-workshop/)
 
 **Learn the basics of WebGL in small, manageable chunks. The sequel to
 [shader-school](http://github.com/stackgl/shader-school), created for
@@ -18,7 +18,7 @@ is included with node:
 After that completes, you should be able to run the workshopper with the command:
 
 ``` bash
-shader-school
+webgl-workshop
 ```
 
 The script will ask you if you want to create an answer directory, press `y` to
