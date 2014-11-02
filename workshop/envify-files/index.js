@@ -46,6 +46,7 @@ function envifyFiles(template, target, bundler) {
   })
 
   envify.project_root = root
+  envify.answers_root = target
   bundler.transform(envify, require.resolve('envify'))
 
   return bundler

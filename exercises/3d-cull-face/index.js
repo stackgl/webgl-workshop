@@ -26,7 +26,7 @@ var gl = require('@workshop/common')({
   , exercise: exercise
   , solution: solution
   , submission: submission
-  , file: path.resolve(process.env.project_root, __dirname.slice(1), 'submission', 'index.js')
+  , file: path.resolve(process.env.answers_root, 'index.js')
   , title: 'Face culling'
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.

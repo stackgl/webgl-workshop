@@ -27,7 +27,7 @@ var gl = require('@workshop/common')({
   , solution: solution
   , submission: submission
   , title: 'Texture Creation'
-  , file: path.resolve(process.env.project_root, __dirname.slice(1), 'submission', 'index.js')
+  , file: path.resolve(process.env.answers_root, 'index.js')
   , test: function(done) {
     // >=99% of pixels should be no more than 5 units in difference.
     var start = Date.now()
