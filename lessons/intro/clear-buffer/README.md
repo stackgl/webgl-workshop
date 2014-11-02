@@ -19,7 +19,7 @@ Sets the clear color to an rgba triple.  The input arguments are floating point 
 This clears the color channel of the drawing buffer.  It is possible to pass other values to this function, though we won't worry about this until later.
 
 ## Exercise
-For this exercise, write a method which takes a WebGL context as input and clears the background color to opaque magenta (fully satured red and blue, no green).  To help get started, here is a shell:
+For this exercise, write a method which takes a WebGL context as input and clears the background color to opaque magenta (fully saturated red and blue, no green).  To help get started, here is a shell:
 
 ```javascript
 module.exports = function(gl) {
