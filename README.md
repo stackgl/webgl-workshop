@@ -15,6 +15,10 @@ as a copy of [node.js](http://nodejs.org/) and [git](http://git-scm.com/). Once 
 all of that set up, you can install the workshop using [npm](http://npmjs.org/), which
 is included with node:
 
+``` bash
+sudo npm install -g webgl-workshop
+```
+
 After that completes, you should be able to run the workshopper with the command:
 
 ``` bash
