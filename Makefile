@@ -6,14 +6,16 @@ OSXFILE := $(OSXDEST)/Contents/Resources/app.nw
 .PHONY: build/osx clean pack publish
 
 pack:
-	# npm run clean
-	# npm install
-	# npm dedupe
+	npm run clean
+	npm install
+	npm dedupe
 	cp package.json _package.json
 	node lib/pack
 	find . -type file \
 		| grep -v ./app/ \
 		| grep -v ./.git/ \
+		| grep -v ./docs/ \
+		| grep -v ./build/ \
 		| grep -v ./answers/ \
 		| grep -v ./lessons/ \
 		| grep -v ./workshop/ \
@@ -21,6 +23,7 @@ pack:
 		| grep -v ./_package.json \
 		| grep -v ./Makefile \
 		| grep -v workshop.tar.gz \
+		| grep -v ./node_modules/[^@] \
 		| tar -cvzf workshop.tar.gz -T -
 	mv _package.json package.json
 
