@@ -56,7 +56,8 @@ function BasicServer(dirname) {
     }
 
     function createBits() {
-      serve = st(dirname)
+      serve = st({ path: dirname, dot: true })
+
       bundler = watchify(browserify({
         entries: [path.join(dirname, 'index.js')]
         , index: 'index.html'
