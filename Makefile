@@ -2,6 +2,7 @@ PATH := $(PWD)/node_modules/.bin:$(PATH)
 APPNAME := WebGL\ Workshop
 OSXDEST := build/osx/$(APPNAME).app
 OSXFILE := $(OSXDEST)/Contents/Resources/app.nw
+NWVERSION := 0.11.0
 
 .PHONY: build/osx clean pack publish
 
@@ -48,7 +49,7 @@ build/osx: $(OSXFILE)
 build/downloads/osx.zip:
 	mkdir -p build/downloads
 	test -f build/downloads/osx.zip || \
-	(nw-download build/downloads/osx.zip -p osx -r 0.10.5); true
+	(nw-download build/downloads/osx.zip -p osx -r $(NWVERSION)); true
 
 $(OSXDEST): build/downloads/osx.zip
 	mkdir -p build/osx
