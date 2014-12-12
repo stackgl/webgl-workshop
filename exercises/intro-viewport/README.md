@@ -22,7 +22,7 @@ var left = 0
 var width = 512
 var height = 512
 
-gl.viewport(top, left, width, height)
+gl.viewport(left, top, width, height)
 ```
 
 Most of the time, you want to draw to fill the entire screen. You can do that
