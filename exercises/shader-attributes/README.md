@@ -21,7 +21,7 @@ var program = gl.createProgram()
 // ... set up shaders, etc.
 
 gl.bindAttribLocation(program, 0, 'position')
-gl.linkProgram()
+gl.linkProgram(program)
 ```
 
 ## `gl.bindAttribLocation(program, index, name)`
