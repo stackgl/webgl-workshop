@@ -1,7 +1,7 @@
 var fs = require('fs')
 
 var VERT_SRC = fs.readFileSync(__dirname + '/shader.vert', 'utf8')
-var FRAG_SRC = fs.readFileSYnc(__dirname + '/shader.frag', 'utf8')
+var FRAG_SRC = fs.readFileSync(__dirname + '/shader.frag', 'utf8')
 
 function compileShader(gl, type, src) {
   var shader = gl.createShader(type)
