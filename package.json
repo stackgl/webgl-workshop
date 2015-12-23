@@ -78,7 +78,7 @@
     "fs-readdir-recursive": "0.0.2",
     "gl-api": "^1.0.1",
     "gl-clear": "0.0.1",
-    "gl-compare": "^2.0.1",
+    "gl-compare": "^2.0.2",
     "gl-compare-sidebar": "^1.1.4",
     "gl-context": "^0.1.1",
     "gl-geometry": "^1.0.0",
