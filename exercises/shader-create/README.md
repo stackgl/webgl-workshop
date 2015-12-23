@@ -62,7 +62,7 @@ if(!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
 > Reads the parameter `pname` from shader.  `pname` must be one of:
 * `gl.SHADER_TYPE` returns either `gl.FRAGMENT_SHADER` or `gl.VERTEX_SHADER`
 * `gl.DELETE_STATUS` returns true if shader deleted
-* `gl.COMPILE_STATUS` returns true if there was an error compiling the shader
+* `gl.COMPILE_STATUS` returns false if there was an error compiling the shader
 
 ## `gl.getShaderInfoLog(shader)`
 > Returns a log of error messages created when compiling the shader in string format.
