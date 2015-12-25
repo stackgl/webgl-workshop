@@ -17,4 +17,8 @@ You should set up attribute pointers for this buffer.
 
 # Info and hints
 
-Remember that `gl.vertexAttribPointer` can take in a stride and offset (both of which are given in bytes).
+Here's the `gl.vertexAttribPointer` method signature for your reference:
+
+`gl.vertexAttribPointer(location, size, type, normalized, stride, offset)`
+
+Remember `stride` and `offset` must be given in bytes.
