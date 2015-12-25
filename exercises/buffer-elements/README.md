@@ -1,6 +1,6 @@
 # Exercise
 
-For this exercise you will draw a mesh using indexed arrays.  A shader with the necessary vertex attributes is provided for you.  It is up to you to set up the element array buffer and draw the object with the correct.
+For this exercise you will draw a mesh using indexed arrays.  A shader with the necessary vertex attributes is provided for you.  It is up to you to set up the element array buffer and draw the object.
 
 The contents of the element array buffer are provided for you in a native array called `ELEMENT_DATA` and the number of elements to draw is stored in the variable `ELEMENT_COUNT`.
 
