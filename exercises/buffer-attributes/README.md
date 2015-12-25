@@ -55,7 +55,7 @@ And once this is done, we can then specify the data of the pointer using the fol
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0)
 ```
 
-This method is pretty complicated, so lets unpack how it works:
+This method is pretty complicated, so let's unpack how it works:
 
 ## `gl.vertexAttribPointer(location, size, type, normalized, stride, offset)`
 > Sets up an attribute pointer for the attribute at `location` using the vertex buffer currently bound to `gl.ARRAY_BUFFER`:
