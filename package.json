@@ -110,7 +110,7 @@
     "st": "^0.5.2",
     "teapot": "^1.0.0",
     "unindex-mesh": "^1.0.1",
-    "watchify": "2.1.0",
+    "watchify": "^3.7.0",
     "wordwrap": "0.0.2",
     "xhr": "^1.17.0"
   },
