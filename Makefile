@@ -12,7 +12,7 @@ pack:
 	npm dedupe
 	cp package.json _package.json
 	node lib/pack
-	find . -type file \
+	find -L . -type file \
 		| grep -v ./app/ \
 		| grep -v ./.git/ \
 		| grep -v ./docs/ \
@@ -24,7 +24,7 @@ pack:
 		| grep -v ./_package.json \
 		| grep -v ./Makefile \
 		| grep -v workshop.tar.gz \
-		| grep -v ./node_modules/[^@] \
+		| grep -Ev "./node_modules/[^@]" \
 		| tar -cvzf workshop.tar.gz -T -
 	mv _package.json package.json
 

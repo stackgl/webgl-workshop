@@ -9,7 +9,8 @@
   },
   "contributors": [
     "Mikola Lysenko",
-    "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)"
+    "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+    "Philipp Beau <philippb3au@gmail.com> (https://dathuis.nl/)"
   ],
   "scripts": {
     "start": "node node.js",
